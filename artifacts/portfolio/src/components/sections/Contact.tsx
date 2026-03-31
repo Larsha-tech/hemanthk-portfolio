@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Send, Building2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Form,
   FormControl,
@@ -20,107 +19,150 @@ import { Textarea } from "@/components/ui/textarea";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
+const contactInfo = [
+  {
+    icon: <Mail className="w-5 h-5" />,
+    label: "Email",
+    value: "hemanth@larshatechnologies.com",
+    href: "mailto:hemanth@larshatechnologies.com",
+  },
+  {
+    icon: <Phone className="w-5 h-5" />,
+    label: "Phone",
+    value: "+91 XXXXX XXXXX",
+    href: "tel:+91XXXXXXXXXX",
+  },
+  {
+    icon: <Linkedin className="w-5 h-5" />,
+    label: "LinkedIn",
+    value: "linkedin.com/in/hemanthk",
+    href: "#",
+  },
+  {
+    icon: <Building2 className="w-5 h-5" />,
+    label: "Company",
+    value: "Larsha Technologies",
+    href: "#",
+  },
+  {
+    icon: <MapPin className="w-5 h-5" />,
+    label: "Location",
+    value: "India",
+    href: "#",
+  },
+];
+
 export function Contact() {
   const { toast } = useToast();
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(_values: z.infer<typeof formSchema>) {
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      description: "Thank you for reaching out. I will get back to you soon.",
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className="py-20" style={{ backgroundColor: "#f5f7fa" }}>
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Get in Touch</h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
-          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto text-lg">
-            Have a question or want to work together? Feel free to reach out.
+          <h2
+            className="text-3xl font-bold tracking-tight text-foreground mb-4"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            Get in Touch
+          </h2>
+          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "#1f3a5f" }}></div>
+          <p className="text-muted-foreground max-w-xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Have a question, opportunity, or want to discuss IT infrastructure challenges? Feel free to reach out.
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-8">
+          {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2"
           >
-            <Card className="border-border bg-card">
-              <CardContent className="p-6 md:p-8 space-y-8">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Contact Information</h3>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">Email</p>
-                    <a href="mailto:hemanth@larshatechnologies.com" className="text-foreground hover:text-primary transition-colors">
-                      hemanth@larshatechnologies.com
-                    </a>
-                  </div>
-                </div>
+            <div className="rounded-xl border border-border bg-white shadow-sm p-6 h-full">
+              <h3
+                className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                Contact Information
+              </h3>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5" />
+              <div className="space-y-5">
+                {contactInfo.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-4">
+                    <div
+                      className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                      style={{ backgroundColor: "rgba(31,58,95,0.09)", color: "#1f3a5f" }}
+                    >
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p
+                        className="text-xs font-medium text-muted-foreground mb-0.5"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {item.label}
+                      </p>
+                      <a
+                        href={item.href}
+                        className="text-sm text-foreground hover:text-primary transition-colors"
+                        style={{ fontFamily: "'Inter', sans-serif", color: "#111827" }}
+                      >
+                        {item.value}
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">Phone</p>
-                    <p className="text-foreground">+91 XXXXX XXXXX</p>
-                  </div>
-                </div>
+                ))}
+              </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">Location</p>
-                    <p className="text-foreground">Larsha Technologies, India</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                    <Linkedin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">LinkedIn</p>
-                    <a href="#" className="text-foreground hover:text-primary transition-colors">
-                      linkedin.com/in/hemanthk
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              <div
+                className="mt-8 rounded-xl p-5"
+                style={{ backgroundColor: "#1f3a5f" }}
+              >
+                <p
+                  className="text-white font-semibold text-sm mb-1"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  Open to Opportunities
+                </p>
+                <p
+                  className="text-white/70 text-xs leading-relaxed"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Currently available for IT infrastructure consulting, freelance engagements, and full-time IT management roles.
+                </p>
+              </div>
+            </div>
           </motion.div>
 
+          {/* Right: Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -128,76 +170,85 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-3"
           >
-            <Card className="border-border bg-card">
-              <CardContent className="p-6 md:p-8">
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your Name" {...field} className="bg-background" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                              <Input placeholder="your.email@example.com" {...field} className="bg-background" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
+            <div className="rounded-xl border border-border bg-white shadow-sm p-6 h-full">
+              <h3
+                className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                Send a Message
+              </h3>
+
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
                     <FormField
                       control={form.control}
-                      name="subject"
+                      name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Subject</FormLabel>
+                          <FormLabel style={{ fontFamily: "'Inter', sans-serif" }}>Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="How can I help you?" {...field} className="bg-background" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="Write your message here..." 
-                              className="min-h-[150px] bg-background resize-none" 
-                              {...field} 
+                            <Input
+                              placeholder="Your Name"
+                              {...field}
+                              className="bg-background"
+                              data-testid="input-name"
                             />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full md:w-auto gap-2" size="lg">
-                      <Send size={18} />
-                      Send Message
-                    </Button>
-                  </form>
-                </Form>
-              </CardContent>
-            </Card>
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel style={{ fontFamily: "'Inter', sans-serif" }}>Email</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="your.email@example.com"
+                              {...field}
+                              className="bg-background"
+                              data-testid="input-email"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel style={{ fontFamily: "'Inter', sans-serif" }}>Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="How can I help you? Tell me about your IT infrastructure needs..."
+                            className="min-h-[160px] bg-background resize-none"
+                            {...field}
+                            data-testid="textarea-message"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full sm:w-auto gap-2 font-medium text-white"
+                    style={{ backgroundColor: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}
+                    data-testid="button-send-message"
+                  >
+                    <Send size={17} />
+                    Send Message
+                  </Button>
+                </form>
+              </Form>
+            </div>
           </motion.div>
         </div>
       </div>

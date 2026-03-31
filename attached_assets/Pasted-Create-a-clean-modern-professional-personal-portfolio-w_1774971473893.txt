@@ -1,0 +1,218 @@
+Create a clean, modern, professional personal portfolio website for an IT Infrastructure Specialist, IT Manager, Systems Administrator, Automation Engineer, and Network Administrator.
+
+The website must look professional, minimal, neat, and structured. Do NOT use too many colors, animations, or flashy design. The design should look like an enterprise IT engineer portfolio.
+
+====================
+DESIGN REQUIREMENTS
+===================
+
+Color Theme:
+
+* Primary Color: Dark Blue (#1f3a5f)
+* Secondary Color: Light Grey (#f5f7fa)
+* Accent Color: Grey (#6b7280)
+* Background: White (#ffffff)
+* Text Color: Dark Grey (#111827)
+
+Fonts:
+
+* Headings: Poppins
+* Body Text: Inter or Roboto
+* Font sizes:
+
+  * Heading 1: 36px
+  * Heading 2: 28px
+  * Heading 3: 22px
+  * Body Text: 16px
+  * Small Text: 14px
+
+Layout Style:
+
+* Clean spacing
+* Card-based sections
+* Soft shadows
+* Rounded corners
+* Top navigation bar
+* Sticky navbar
+* Smooth scrolling
+* Section-based single page layout
+
+Sections order:
+
+1. Navigation Bar
+2. Home / Hero Section
+3. About Me
+4. Skills
+5. Projects
+6. Experience
+7. Contact
+8. Footer
+
+Navbar Menu:
+
+* Home
+* About
+* Skills
+* Projects
+* Experience
+* Contact
+* Resume Download Button
+
+====================
+HOME SECTION
+============
+
+Left side:
+
+* Name: Hemanth K
+* Title: IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer
+* Short Professional Summary
+* Buttons:
+
+  * View Projects
+  * Download Resume
+  * Contact Me
+
+Right side:
+
+* Professional photo placeholder
+
+Show statistics in boxes:
+
+* 200+ Systems Managed
+* 100+ Remote Users Supported
+* Multiple Servers Managed
+* Automation Systems Implemented
+* Render Farm Built
+
+====================
+ABOUT ME SECTION
+================
+
+Write a professional summary including:
+
+* Managing 200+ desktop systems and laptops
+* Supporting 100+ remote freelancers
+* Server management (TrueNAS, Proxmox, VMware, Windows Server, Linux)
+* NAS and Backup Management
+* Network management (Switches, VLANs, Firewall, Access Points)
+* Firewall monitoring
+* Remote VPN setup (Tailscale, WireGuard)
+* Automation (n8n, GLPI, Slack, scripting)
+* Monitoring (Zabbix)
+* Software license management (Autodesk, Adobe, V-Ray)
+* Web server (Apache, PHP, MySQL)
+* Internal tool development
+* Render Farm system
+* IT asset management
+* Backup and recovery planning
+* Server room setup
+* Temperature monitoring
+* UPS and power management
+* Documentation and knowledge base
+* Troubleshooting and user support
+* Vendor coordination
+
+====================
+SKILLS SECTION
+==============
+
+Create skill cards grouped into categories:
+
+IT Infrastructure
+Networking
+Servers & Virtualization
+Automation & Scripting
+Monitoring Tools
+Software & Licensing
+Development
+Storage & Backup
+Security
+
+====================
+PROJECTS SECTION
+================
+
+Create project cards with:
+
+* Project Name
+* Description
+* Technologies Used
+* Problem Solved
+* Result
+
+Projects to include:
+
+* Unreal Engine Distributed Render Farm System
+* IT Automation System (n8n + GLPI + Slack)
+* TrueNAS Central Storage System
+* Remote Access VPN System
+* IT Asset & License Management System
+* Healthcare Portal (PHP + MySQL)
+* Larsha Technologies Website
+* Office LAN Messaging Tool (Python)
+* Server Monitoring System
+* Temperature Monitoring System
+
+====================
+EXPERIENCE SECTION
+==================
+
+Role:
+IT Manager / IT Infrastructure Administrator
+
+Responsibilities:
+
+* IT infrastructure management
+* Server management
+* Network management
+* Automation
+* Backup systems
+* Monitoring systems
+* Security and access control
+* Software license management
+* Remote user management
+* IT documentation
+* Vendor coordination
+* System uptime improvement
+* Troubleshooting
+* User support
+
+====================
+CONTACT SECTION
+===============
+
+Include:
+
+* Email
+* Phone
+* LinkedIn
+* Company: Larsha Technologies
+* Location: India
+* Contact Form (Name, Email, Message)
+
+====================
+FOOTER
+======
+
+Simple footer:
+© 2026 Hemanth K – IT Infrastructure | Automation | Systems Administration
+
+====================
+TECHNICAL REQUIREMENTS
+======================
+
+* Use HTML, CSS, JavaScript
+* Responsive design (Mobile + Desktop)
+* Use Flexbox or Grid
+* Use card layout for skills and projects
+* Smooth scrolling navigation
+* Sticky navbar
+* Contact form UI
+* Resume download button
+* Clean and professional layout
+* Icons for skills (use Font Awesome)
+* Section spacing and alignment should be consistent
+* The website should look like a professional IT engineer portfolio, not a designer portfolio
+
+Also generate all text content for each section so the website is ready to deploy.

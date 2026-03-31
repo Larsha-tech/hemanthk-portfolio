@@ -1,51 +1,132 @@
-import { Linkedin, Mail, Github } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear() > 2026 ? new Date().getFullYear() : 2026;
+  const scrollTo = (href: string) => {
+    const el = document.querySelector(href);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
 
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-muted-foreground/20 pb-8 mb-8">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold tracking-tight mb-2">Hemanth K</h2>
-            <p className="text-muted-foreground/80 text-sm max-w-sm">
-              IT Infrastructure | Automation | Systems Administration
+    <footer style={{ backgroundColor: "#1f3a5f" }} className="text-white">
+      <div className="container mx-auto px-4 md:px-8 py-12">
+        <div className="grid md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+          {/* Brand */}
+          <div>
+            <h2
+              className="text-xl font-bold mb-2"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Hemanth K
+            </h2>
+            <p
+              className="text-white/60 text-sm leading-relaxed"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer
             </p>
+            <div className="flex items-center gap-3 mt-4">
+              <a
+                href="#"
+                className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
+                style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={17} className="text-white" />
+              </a>
+              <a
+                href="mailto:hemanth@larshatechnologies.com"
+                className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
+                style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
+                aria-label="Email"
+              >
+                <Mail size={17} className="text-white" />
+              </a>
+              <a
+                href="tel:+91XXXXXXXXXX"
+                className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
+                style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
+                aria-label="Phone"
+              >
+                <Phone size={17} className="text-white" />
+              </a>
+            </div>
           </div>
-          
-          <div className="flex items-center gap-4">
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary text-background flex items-center justify-center transition-colors"
-              aria-label="LinkedIn"
+
+          {/* Navigation */}
+          <div>
+            <h3
+              className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/80"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              <Linkedin size={20} />
-            </a>
-            <a 
-              href="mailto:hemanth@larshatechnologies.com" 
-              className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary text-background flex items-center justify-center transition-colors"
-              aria-label="Email"
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              {[
+                { name: "Home", href: "#home" },
+                { name: "About", href: "#about" },
+                { name: "Skills", href: "#skills" },
+                { name: "Projects", href: "#projects" },
+                { name: "Experience", href: "#experience" },
+                { name: "Contact", href: "#contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => scrollTo(link.href)}
+                    className="text-sm text-white/60 hover:text-white transition-colors text-left"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h3
+              className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/80"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              <Mail size={20} />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary text-background flex items-center justify-center transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
+              Contact
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <Mail size={15} className="text-white/40 shrink-0" />
+                hemanth@larshatechnologies.com
+              </li>
+              <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <Phone size={15} className="text-white/40 shrink-0" />
+                +91 XXXXX XXXXX
+              </li>
+              <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <MapPin size={15} className="text-white/40 shrink-0" />
+                Larsha Technologies, India
+              </li>
+              <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <Linkedin size={15} className="text-white/40 shrink-0" />
+                linkedin.com/in/hemanthk
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground/60">
-          <p>© {currentYear} Hemanth K. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#home" className="hover:text-background transition-colors">Home</a>
-            <a href="#about" className="hover:text-background transition-colors">About</a>
-            <a href="#projects" className="hover:text-background transition-colors">Projects</a>
-          </div>
+        <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p
+            className="text-sm text-white/40"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            &copy; 2026 Hemanth K – IT Infrastructure | Automation | Systems Administration
+          </p>
+          <p
+            className="text-xs text-white/30"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Larsha Technologies, India
+          </p>
         </div>
       </div>
     </footer>

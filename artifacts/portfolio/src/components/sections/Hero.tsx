@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Network } from "lucide-react";
 
 export function Hero() {
   const handleScrollTo = (href: string) => {
@@ -12,96 +12,161 @@ export function Hero() {
   };
 
   const handleDownloadResume = () => {
-    alert("Downloading resume... (Placeholder)");
+    alert("Resume download will be available once your resume file is uploaded.");
   };
 
   const stats = [
-    { value: "200+", label: "Systems Managed" },
-    { value: "100+", label: "Remote Users Supported" },
-    { value: "Multiple", label: "Servers & NAS Managed" },
-    { value: "Various", label: "Automation Systems Built" },
-    { value: "1", label: "Render Farm Built" },
+    { value: "200+", label: "Systems Managed", icon: <Monitor className="w-5 h-5" /> },
+    { value: "100+", label: "Remote Users Supported", icon: <Users className="w-5 h-5" /> },
+    { value: "Multiple", label: "Servers Managed", icon: <Server className="w-5 h-5" /> },
+    { value: "Various", label: "Automation Systems", icon: <Cpu className="w-5 h-5" /> },
+    { value: "1", label: "Render Farm Built", icon: <Network className="w-5 h-5" /> },
   ];
 
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-white overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.04]"
+          style={{ background: "radial-gradient(circle, #1f3a5f 0%, transparent 70%)", transform: "translate(20%, -30%)" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+
+          {/* Left: Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-3xl md:text-4xl font-bold mx-auto mb-6 shadow-lg shadow-primary/20">
-              HK
-            </div>
-            <h2 className="text-sm md:text-base font-semibold text-primary uppercase tracking-wider mb-2">
-              Hi, I'm Hemanth K
-            </h2>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-              IT Infrastructure Specialist <span className="text-muted-foreground">|</span> IT Manager
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-widest mb-4 px-3 py-1 bg-primary/8 rounded-full border border-primary/15">
+              IT Infrastructure Specialist
+            </span>
+
+            <h1
+              className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold text-foreground mb-4 leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Hemanth K
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Designing Reliable IT Systems, Automating Operations, and Managing Infrastructure at Scale.
+
+            <p
+              className="text-base md:text-lg font-medium text-primary mb-5 leading-snug"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer
             </p>
+
+            <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Designing Reliable IT Systems, Automating Operations, and Managing Infrastructure at Scale. 
+              With hands-on expertise across servers, networks, automation, and enterprise IT operations.
+            </p>
+
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-0">
+              <Button
+                size="lg"
+                className="gap-2 font-medium"
+                style={{ backgroundColor: "#1f3a5f", color: "#fff" }}
+                onClick={() => handleScrollTo("#projects")}
+                data-testid="button-view-projects"
+              >
+                View Projects
+                <ArrowDown size={17} />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="gap-2 font-medium border-primary/40 text-primary hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                onClick={handleDownloadResume}
+                data-testid="button-download-resume"
+              >
+                <Download size={17} />
+                Download Resume
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="gap-2 font-medium"
+                onClick={() => handleScrollTo("#contact")}
+                data-testid="button-contact-me"
+              >
+                <Mail size={17} />
+                Contact Me
+              </Button>
+            </div>
           </motion.div>
 
+          {/* Right: Photo Placeholder */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-16"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex justify-center lg:justify-end"
           >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto min-w-[160px] gap-2"
-              onClick={() => handleScrollTo("#projects")}
-              data-testid="button-view-projects"
-            >
-              View Projects
-              <ArrowDown size={18} />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto min-w-[160px] gap-2"
-              onClick={handleDownloadResume}
-              data-testid="button-download-resume"
-            >
-              <Download size={18} />
-              Download Resume
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              className="w-full sm:w-auto min-w-[160px] gap-2"
-              onClick={() => handleScrollTo("#contact")}
-              data-testid="button-contact-me"
-            >
-              <Mail size={18} />
-              Contact Me
-            </Button>
-          </motion.div>
+            <div className="relative">
+              {/* Outer ring */}
+              <div
+                className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl flex items-center justify-center shadow-xl"
+                style={{ backgroundColor: "#1f3a5f" }}
+              >
+                {/* Inner initials */}
+                <div className="flex flex-col items-center justify-center gap-3">
+                  <div
+                    className="w-20 h-20 rounded-xl flex items-center justify-center text-3xl font-bold"
+                    style={{ backgroundColor: "rgba(255,255,255,0.15)", color: "#fff", fontFamily: "'Poppins', sans-serif" }}
+                  >
+                    HK
+                  </div>
+                  <p className="text-white/80 text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Hemanth K
+                  </p>
+                  <p className="text-white/60 text-xs text-center px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    IT Infrastructure Specialist
+                  </p>
+                </div>
+              </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 w-full border-t border-border pt-12"
-          >
+              {/* Floating badge: top-right */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                200+ Systems
+              </div>
+              {/* Floating badge: bottom-left */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Render Farm Built
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Stats Row */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mt-16 max-w-6xl mx-auto"
+        >
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center justify-center text-center">
-                <span className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center text-center py-5 px-4 rounded-xl border border-border bg-secondary/60 shadow-sm hover:shadow-md hover:border-primary/25 transition-all"
+              >
+                <span className="text-primary/60 mb-2">{stat.icon}</span>
+                <span
+                  className="text-2xl font-bold text-foreground mb-0.5"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
                   {stat.value}
                 </span>
-                <span className="text-xs md:text-sm text-muted-foreground font-medium">
+                <span className="text-xs text-muted-foreground font-medium leading-tight text-center" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {stat.label}
                 </span>
               </div>
             ))}
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
