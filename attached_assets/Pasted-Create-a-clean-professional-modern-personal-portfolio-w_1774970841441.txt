@@ -1,0 +1,238 @@
+Create a clean, professional, modern personal portfolio website for an IT Infrastructure Specialist, IT Manager, Automation Engineer, and Systems Administrator. The website must be neat, clean, and professional, not overly colorful or flashy. Use a white, grey, and dark blue color theme with clean fonts and a modern layout.
+
+Website Owner Name: Hemanth K
+
+Professional Title:
+IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer | Network Administrator
+
+Tagline:
+Designing Reliable IT Systems, Automating Operations, and Managing Infrastructure at Scale
+
+Sections Required:
+
+1. Home Section:
+
+* Professional introduction
+* Short professional summary
+* Buttons: View Projects, Download Resume, Contact
+* Professional photo placeholder
+* Highlight numbers:
+
+  * 200+ Systems Managed
+  * 100+ Remote Users Supported
+  * Multiple Servers & NAS Managed
+  * Automation Systems Implemented
+  * Render Farm Built
+
+2. About Me Section:
+   Write a strong professional summary including the following work:
+
+I manage complete IT infrastructure for a company, including desktop systems, servers, network devices, software licenses, backups, automation, and user support. My work focuses on reducing downtime, automating repetitive IT tasks, improving system performance, and building reliable infrastructure.
+
+Responsibilities include:
+
+* Managing 200+ desktop systems and laptops
+* Supporting 100+ remote freelancers with secure access
+* Installing and maintaining operating systems
+* Domain joining and user management
+* Software installation and license management (Autodesk, Adobe, V-Ray, etc.)
+* Server management (TrueNAS, Proxmox, VMware ESXi, Windows Server)
+* NAS storage management and backup systems
+* Network management (Switches, Access Points, VLANs, Firewall)
+* Firewall monitoring (Sophos)
+* Remote access setup (Tailscale, WireGuard, VPN)
+* Automation using n8n, GLPI, Slack
+* Ticketing system management
+* IT asset management
+* Monitoring systems using Zabbix
+* Backup monitoring and maintenance
+* PowerShell scripting and automation
+* Bash scripting on Linux servers
+* Database management (MySQL)
+* Web server management (Apache, PHP)
+* Building internal tools for office use
+* Managing software updates and patches
+* System performance monitoring
+* Managing shared storage for teams
+* Managing permissions and access control
+* Troubleshooting hardware and software issues
+* Coordinating with vendors for hardware and software
+* Documentation and IT knowledge base creation
+* Cable management and server room setup
+* Temperature monitoring for server room
+* UPS and power management
+
+3. Skills Section (Categorized):
+
+IT Infrastructure:
+
+* IT Infrastructure Management
+* IT Operations Management
+* System Administration
+* Technical Support
+* IT Asset Management
+* Backup Management
+* Access Control Management
+
+Networking:
+
+* Switch Management
+* VLAN Configuration
+* Firewall Management
+* VPN Setup
+* Remote Access Setup
+* Network Troubleshooting
+
+Servers & Virtualization:
+
+* TrueNAS
+* Proxmox
+* VMware ESXi
+* Windows Server
+* Linux Servers (Debian/Ubuntu)
+* Storage Servers
+* Virtual Machines
+* Docker (Basic)
+
+Automation & Scripting:
+
+* n8n Automation
+* GLPI Automation
+* Slack Automation
+* PowerShell Scripting
+* Bash Scripting
+* Task Automation
+* Process Automation
+
+Monitoring Tools:
+
+* Zabbix
+* GLPI
+* System Monitoring
+* Network Monitoring
+* Backup Monitoring
+
+Software & Licensing:
+
+* Autodesk License Management
+* Adobe License Management
+* Software Deployment
+* Patch Management
+
+Development:
+
+* Basic Python
+* PHP
+* MySQL
+* HTML
+* CSS
+* JavaScript (Basic)
+* Building Internal Tools
+* Web Portals
+
+Special Projects:
+
+* Unreal Engine Distributed Render Farm System
+* Centralized NAS Storage System
+* Remote VPN Access System for Freelancers
+* IT Automation System (n8n + GLPI + Slack)
+* Healthcare Portal (PHP + MySQL)
+* Larsha Technologies Business Website
+* IT Knowledge Base System
+* License Management Tracking System
+* Office Messaging System (Python LAN Messenger)
+* Server Monitoring System
+* Temperature Monitoring System for Server Room
+
+4. Projects Section:
+   Create detailed project cards for:
+
+Project 1: Unreal Engine Distributed Render Farm
+
+* Built a distributed render farm system with master and multiple render nodes
+* Job distribution system
+* Node status monitoring
+* Job cancel system per node
+* Improved rendering workflow and reduced render time
+
+Project 2: IT Automation System
+
+* Automated ticket alerts to Slack
+* Automated daily IT reports
+* Automated notifications
+* Reduced manual work
+
+Project 3: TrueNAS Central Storage
+
+* Central file server
+* User permissions
+* Backup system
+* Shared storage for team
+
+Project 4: Remote Access VPN System
+
+* Secure remote access for freelancers
+* File access and remote work support
+
+Project 5: Healthcare Portal
+
+* PHP + MySQL based system
+* User login
+* Data management
+
+Project 6: IT Asset & License Management
+
+* Tracking software licenses
+* Tracking systems and users
+
+Project 7: Office LAN Messaging Tool
+
+* Python-based messaging system
+* Send messages to multiple computers
+
+5. Experience Section:
+   Write professional experience as:
+
+IT Manager / IT Infrastructure Administrator
+
+Responsible for:
+
+* Complete IT infrastructure management
+* Server management
+* Network management
+* Automation
+* User support
+* Backup systems
+* Monitoring systems
+* Security and access control
+* Software license management
+* Remote user management
+* IT documentation
+* Vendor coordination
+* System uptime and reliability improvement
+
+6. Contact Section:
+
+* Email
+* Phone
+* LinkedIn
+* Company: Larsha Technologies
+* Location: India
+
+7. Resume Download Button
+
+8. Footer:
+   © 2026 Hemanth K – IT Infrastructure | Automation | Systems Administration
+
+Technical Requirements:
+
+* HTML, CSS, JavaScript
+* Responsive design
+* Clean UI
+* Professional layout
+* Navigation bar
+* Project cards layout
+* Skills icons
+* Smooth scrolling
+* Contact form
+* Resume download button
