@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu, Workflow, Database, Shield, Package, MessageSquare,
-  Activity, Thermometer, BookOpen
+  Activity, Thermometer, BookOpen, ExternalLink
 } from "lucide-react";
 
 const projects = [
@@ -61,7 +61,8 @@ const projects = [
     tags: ["Internal Tools", "Knowledge Base", "Web Portal", "IT Support", "Documentation"],
     problem: "Staff repeatedly raised tickets for the same common IT tasks and issues.",
     result: "Self-service portal empowering users to resolve issues independently, reducing support load.",
-    icon: <BookOpen className="w-6 h-6" />
+    icon: <BookOpen className="w-6 h-6" />,
+    href: "https://portal.hobb-dashboard.com/index.html"
   },
   {
     title: "Server Monitoring System",
@@ -160,6 +161,19 @@ export function Projects() {
                       </Badge>
                     ))}
                   </div>
+
+                  {project.href && (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold transition-colors hover:opacity-80"
+                      style={{ color: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      Visit Site
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
