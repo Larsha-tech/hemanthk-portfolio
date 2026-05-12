@@ -24,7 +24,7 @@ export function Hero() {
   ];
 
   return (
-    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-white overflow-hidden">
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-white dark:bg-background overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.04]"
@@ -118,11 +118,11 @@ export function Hero() {
               </div>
 
               {/* Floating badge: top-right */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <div className="absolute -top-4 -right-4 bg-white dark:bg-card rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 200+ Systems
               </div>
               {/* Floating badge: bottom-left */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-card rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 HOBB
               </div>
             </div>

@@ -84,7 +84,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20" style={{ backgroundColor: "#f5f7fa" }}>
+    <section id="projects" className="py-20" style={{ backgroundColor: "var(--portfolio-section-alt)" }}>
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,7 +99,7 @@ export function Projects() {
           >
             Featured Projects
           </h2>
-          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "#1f3a5f" }}></div>
+          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
           <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
             Showcasing robust systems, automated workflows, and internal tools built to solve real operational challenges.
           </p>
@@ -115,11 +115,11 @@ export function Projects() {
               transition={{ duration: 0.5, delay: (idx % 3) * 0.1 }}
               data-testid={`card-project-${idx}`}
             >
-              <Card className="h-full flex flex-col border-border bg-white hover:border-primary/30 hover:shadow-md transition-all rounded-xl overflow-hidden">
+              <Card className="h-full flex flex-col border-border bg-white dark:bg-card hover:border-primary/30 hover:shadow-md transition-all rounded-xl overflow-hidden">
                 <CardHeader className="pb-3 pt-6 px-6">
                   <div
                     className="w-11 h-11 rounded-lg flex items-center justify-center mb-4"
-                    style={{ backgroundColor: "rgba(31,58,95,0.09)", color: "#1f3a5f" }}
+                    style={{ backgroundColor: "var(--portfolio-icon-bg)", color: "var(--portfolio-accent)" }}
                   >
                     {project.icon}
                   </div>
@@ -144,7 +144,7 @@ export function Projects() {
                       <span className="text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{project.problem}</span>
                     </div>
                     <div className="flex gap-2">
-                      <span className="font-semibold shrink-0" style={{ color: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}>Result:</span>
+                      <span className="font-semibold shrink-0" style={{ color: "var(--portfolio-accent)", fontFamily: "'Inter', sans-serif" }}>Result:</span>
                       <span className="text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{project.result}</span>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold transition-colors hover:opacity-80"
-                      style={{ color: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}
+                      style={{ color: "var(--portfolio-accent)", fontFamily: "'Inter', sans-serif" }}
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       Visit Site

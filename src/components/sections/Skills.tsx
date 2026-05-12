@@ -54,7 +54,7 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white dark:bg-background">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -70,7 +70,7 @@ export function Skills() {
             >
               Technical Skills
             </h2>
-            <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "#1f3a5f" }}></div>
+            <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
             <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
               A comprehensive toolkit for managing, securing, and automating modern IT environments at scale.
             </p>
@@ -84,12 +84,12 @@ export function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.07 }}
-                className="flex flex-col gap-4 p-6 rounded-xl border border-border bg-secondary/40 hover:border-primary/25 hover:shadow-sm transition-all"
+                className="flex flex-col gap-4 p-6 rounded-xl border border-border bg-secondary/40 dark:bg-secondary/20 hover:border-primary/25 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center gap-3">
                   <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: "rgba(31,58,95,0.10)", color: "#1f3a5f" }}
+                    style={{ backgroundColor: "var(--portfolio-icon-bg)", color: "var(--portfolio-accent)" }}
                   >
                     {category.icon}
                   </div>

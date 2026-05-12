@@ -38,7 +38,7 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="py-20" style={{ backgroundColor: "#f5f7fa" }}>
+    <section id="about" className="py-20" style={{ backgroundColor: "var(--portfolio-section-alt)" }}>
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export function About() {
             >
               About Me
             </h2>
-            <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "#1f3a5f" }}></div>
+            <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12 mb-16">
@@ -76,7 +76,7 @@ export function About() {
 
             {/* Right: Quick facts */}
             <div className="lg:col-span-2">
-              <div className="rounded-xl border border-border bg-white p-6 shadow-sm space-y-4">
+              <div className="rounded-xl border border-border bg-white dark:bg-card p-6 shadow-sm space-y-4">
                 <h3
                   className="text-base font-semibold text-foreground mb-5 pb-3 border-b border-border"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -96,7 +96,7 @@ export function About() {
                   <div key={i} className="flex gap-3 text-sm">
                     <span
                       className="font-medium shrink-0 w-28"
-                      style={{ color: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}
+                      style={{ color: "var(--portfolio-accent)", fontFamily: "'Inter', sans-serif" }}
                     >
                       {item.label}
                     </span>
@@ -125,11 +125,11 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.06 }}
-                  className="flex flex-col gap-3 p-5 rounded-xl border border-border bg-white hover:border-primary/25 hover:shadow-sm transition-all"
+                  className="flex flex-col gap-3 p-5 rounded-xl border border-border bg-white dark:bg-card hover:border-primary/25 hover:shadow-sm transition-all"
                 >
                   <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: "rgba(31,58,95,0.09)", color: "#1f3a5f" }}
+                    style={{ backgroundColor: "var(--portfolio-icon-bg)", color: "var(--portfolio-accent)" }}
                   >
                     {item.icon}
                   </div>

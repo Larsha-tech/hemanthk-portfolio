@@ -67,6 +67,19 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* Portfolio brand tokens — used via var() in inline styles */
+:root {
+  --portfolio-navy: #1f3a5f;         /* permanent dark navy for large blocks */
+  --portfolio-accent: #1f3a5f;       /* icon / text / line accent */
+  --portfolio-icon-bg: rgba(31, 58, 95, 0.09);
+  --portfolio-section-alt: #f5f7fa;
+}
+.dark {
+  --portfolio-accent: #60a5fa;
+  --portfolio-icon-bg: rgba(96, 165, 250, 0.15);
+  --portfolio-section-alt: hsl(222, 44%, 11%);
+}
+
 /* LIGHT MODE — White/Light Grey/Dark Blue theme */
 :root {
   --button-outline: rgba(0,0,0, .10);

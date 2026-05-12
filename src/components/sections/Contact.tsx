@@ -76,7 +76,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20" style={{ backgroundColor: "#f5f7fa" }}>
+    <section id="contact" className="py-20" style={{ backgroundColor: "var(--portfolio-section-alt)" }}>
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ export function Contact() {
           >
             Get in Touch
           </h2>
-          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "#1f3a5f" }}></div>
+          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
           <p className="text-muted-foreground max-w-xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
             Have a question, opportunity, or want to discuss IT infrastructure challenges? Feel free to reach out.
           </p>
@@ -106,7 +106,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-2"
           >
-            <div className="rounded-xl border border-border bg-white shadow-sm p-6 h-full">
+            <div className="rounded-xl border border-border bg-white dark:bg-card shadow-sm p-6 h-full">
               <h3
                 className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -119,7 +119,7 @@ export function Contact() {
                   <div key={idx} className="flex items-start gap-4">
                     <div
                       className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: "rgba(31,58,95,0.09)", color: "#1f3a5f" }}
+                      style={{ backgroundColor: "var(--portfolio-icon-bg)", color: "var(--portfolio-accent)" }}
                     >
                       {item.icon}
                     </div>
@@ -133,7 +133,7 @@ export function Contact() {
                       <a
                         href={item.href}
                         className="text-sm text-foreground hover:text-primary transition-colors"
-                        style={{ fontFamily: "'Inter', sans-serif", color: "#111827" }}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       >
                         {item.value}
                       </a>
@@ -144,7 +144,7 @@ export function Contact() {
 
               <div
                 className="mt-8 rounded-xl p-5"
-                style={{ backgroundColor: "#1f3a5f" }}
+                style={{ backgroundColor: "var(--portfolio-navy)" }}
               >
                 <p
                   className="text-white font-semibold text-sm mb-1"
@@ -170,7 +170,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-3"
           >
-            <div className="rounded-xl border border-border bg-white shadow-sm p-6 h-full">
+            <div className="rounded-xl border border-border bg-white dark:bg-card shadow-sm p-6 h-full">
               <h3
                 className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -240,7 +240,7 @@ export function Contact() {
                     type="submit"
                     size="lg"
                     className="w-full sm:w-auto gap-2 font-medium text-white"
-                    style={{ backgroundColor: "#1f3a5f", fontFamily: "'Inter', sans-serif" }}
+                    style={{ backgroundColor: "var(--portfolio-navy)", fontFamily: "'Inter', sans-serif" }}
                     data-testid="button-send-message"
                   >
                     <Send size={17} />

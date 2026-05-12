@@ -10,7 +10,7 @@ export function Footer() {
   };
 
   return (
-    <footer style={{ backgroundColor: "#1f3a5f" }} className="text-white">
+    <footer style={{ backgroundColor: "var(--portfolio-navy)" }} className="text-white">
       <div className="container mx-auto px-4 md:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
           {/* Brand */}
