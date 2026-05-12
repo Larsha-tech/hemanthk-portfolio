@@ -29,7 +29,9 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/hemanth-k-8609b4255"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
                 style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
                 aria-label="LinkedIn"
@@ -108,7 +110,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Linkedin size={15} className="text-white/40 shrink-0" />
-                linkedin.com/in/hemanthk
+                linkedin.com/in/hemanth-k-8609b4255
               </li>
             </ul>
           </div>

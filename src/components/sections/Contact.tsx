@@ -38,8 +38,8 @@ const contactInfo = [
   {
     icon: <Linkedin className="w-5 h-5" />,
     label: "LinkedIn",
-    value: "linkedin.com/in/hemanthk",
-    href: "#",
+    value: "linkedin.com/in/hemanth-k-8609b4255",
+    href: "https://www.linkedin.com/in/hemanth-k-8609b4255",
   },
   {
     icon: <Building2 className="w-5 h-5" />,
