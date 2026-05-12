@@ -1,13 +1,129 @@
 import { motion } from "framer-motion";
-import { Briefcase, Building2, MapPin, Calendar, CheckCircle2, GraduationCap, BookOpen } from "lucide-react";
+import {
+  Briefcase, Building2, MapPin, Calendar, CheckCircle2, GraduationCap, BookOpen,
+  Server, Network, Zap, Users, Cpu, Activity, Code2, Shield, HardDrive, Award
+} from "lucide-react";
 
-const currentResponsibilities = [
-  "Own and operate the full IT stack for 200+ users — servers, network, endpoints, and security.",
-  "Enable secure remote access for 100+ distributed freelancers via Tailscale and WireGuard VPN.",
-  "Automated all IT ticketing, alerts, and daily reports with n8n, GLPI, and Slack — zero manual overhead.",
-  "Proactive infrastructure and environment monitoring with Zabbix; issues resolved before user impact.",
-  "Manage enterprise software license compliance and hardware asset lifecycle via centralized GLPI.",
-  "Centralized NAS storage with automated backups, disaster recovery planning, and server room management.",
+const responsibilityCategories = [
+  {
+    title: "IT Infrastructure & Operations",
+    icon: <Server className="w-4 h-4" />,
+    points: [
+      "Managed 200+ desktops, laptops, and servers for full production operations",
+      "Maintained server room infrastructure, power management, and cable organization",
+      "Managed workstation imaging, OS deployment, and hardware lifecycle",
+      "Maintained uptime for critical production systems through preventive maintenance",
+    ],
+  },
+  {
+    title: "Network & Security",
+    icon: <Network className="w-4 h-4" />,
+    points: [
+      "Designed secure office network with VLAN segmentation for department isolation",
+      "Configured Sophos firewall rules and monitored security logs and alerts",
+      "Implemented VPN-based remote access for 100+ freelancers and remote employees",
+      "Managed access control policies, Wi-Fi access points, and bandwidth optimization",
+    ],
+  },
+  {
+    title: "Automation & Productivity",
+    icon: <Zap className="w-4 h-4" />,
+    points: [
+      "Automated IT operations using PowerShell, Bash, and n8n workflows",
+      "Built automated alerting for monitoring and ticket escalation via Slack",
+      "Streamlined employee onboarding/offboarding processes end-to-end",
+      "Created internal tools improving communication and operational efficiency",
+    ],
+  },
+  {
+    title: "Support & Operations",
+    icon: <Users className="w-4 h-4" />,
+    points: [
+      "Provided technical support for 200+ systems across office and remote locations",
+      "Diagnosed and resolved hardware, software, and network issues",
+      "Managed software licensing compliance and vendor procurement coordination",
+      "Maintained IT documentation, SOPs, and troubleshooting knowledge base",
+    ],
+  },
+  {
+    title: "Production & Render Infrastructure",
+    icon: <Cpu className="w-4 h-4" />,
+    highlight: true,
+    points: [
+      "Built and maintained distributed Unreal Engine render farm infrastructure",
+      "Automated render job distribution and monitored node status across the farm",
+      "Optimized rendering workflows, significantly reducing production turnaround time",
+      "Managed render node deployment and centralized rendering management workflows",
+    ],
+  },
+  {
+    title: "Monitoring & Reliability",
+    icon: <Activity className="w-4 h-4" />,
+    points: [
+      "Implemented centralized monitoring with Zabbix and proactive threshold alerting",
+      "Monitored UPS systems and server room temperature conditions continuously",
+      "Maintained infrastructure dashboards and reduced incident response time",
+      "Improved reliability through real-time alerts and early issue detection",
+    ],
+  },
+  {
+    title: "Development & Internal Platforms",
+    icon: <Code2 className="w-4 h-4" />,
+    points: [
+      "Developed internal tools and portals using Python, PHP, and MySQL",
+      "Built healthcare and operational web portals on Apache infrastructure",
+      "Developed internal LAN communication and monitoring tools",
+      "Created centralized systems for IT asset and license management",
+    ],
+  },
+  {
+    title: "Leadership & Management",
+    icon: <Shield className="w-4 h-4" />,
+    points: [
+      "Managed end-to-end IT operations independently across all departments",
+      "Planned infrastructure upgrades, scalability improvements, and roadmap",
+      "Coordinated IT requirements across production, design, and operations teams",
+      "Managed concurrent IT projects, vendor relationships, and procurement cycles",
+    ],
+  },
+];
+
+const achievements = [
+  {
+    icon: <Cpu className="w-5 h-5" />,
+    title: "Distributed Render Farm",
+    desc: "Built Unreal Engine render farm infrastructure, cutting production turnaround time significantly.",
+  },
+  {
+    icon: <Zap className="w-5 h-5" />,
+    title: "IT Workflow Automation",
+    desc: "n8n + GLPI + Slack pipelines eliminated all manual ticketing, alerts, and daily reporting.",
+  },
+  {
+    icon: <Server className="w-5 h-5" />,
+    title: "200+ Systems Managed",
+    desc: "Complete endpoint management across office desktops, laptops, and distributed remote users.",
+  },
+  {
+    icon: <Users className="w-5 h-5" />,
+    title: "Secure Remote Access",
+    desc: "VPN infrastructure enabling 100+ freelancers to work securely from any location.",
+  },
+  {
+    icon: <HardDrive className="w-5 h-5" />,
+    title: "Centralized Storage",
+    desc: "NAS-based shared storage with automated backup schedules and disaster recovery.",
+  },
+  {
+    icon: <Activity className="w-5 h-5" />,
+    title: "Proactive Monitoring",
+    desc: "Zabbix-based alerting system reducing downtime across production and IT systems.",
+  },
+  {
+    icon: <Award className="w-5 h-5" />,
+    title: "Infrastructure Modernization",
+    desc: "Led full server room setup, virtualization rollout, and IT process automation.",
+  },
 ];
 
 const previousRoles = [
@@ -108,6 +224,7 @@ export function Experience() {
             transition={{ duration: 0.5 }}
           >
             <div className="rounded-xl border border-border bg-white shadow-sm overflow-hidden">
+              {/* Role header */}
               <div
                 className="px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
                 style={{ backgroundColor: "#1f3a5f" }}
@@ -146,6 +263,8 @@ export function Experience() {
                   </div>
                 </div>
               </div>
+
+              {/* Categorized responsibilities */}
               <div className="px-6 py-6">
                 <h4
                   className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-5"
@@ -153,24 +272,86 @@ export function Experience() {
                 >
                   Key Responsibilities
                 </h4>
-                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-                  {currentResponsibilities.map((item, idx) => (
+                <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+                  {responsibilityCategories.map((cat, idx) => (
                     <motion.div
                       key={idx}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: idx * 0.04 }}
-                      className="flex gap-3 items-start"
+                      transition={{ duration: 0.3, delay: idx * 0.05 }}
+                      className={`rounded-lg p-4 border ${cat.highlight ? "border-blue-200 bg-blue-50/60" : "border-border/60 bg-secondary/30"}`}
                     >
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#1f3a5f" }} />
-                      <span className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        {item}
-                      </span>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span style={{ color: "#1f3a5f" }}>{cat.icon}</span>
+                        <h5
+                          className="text-xs font-semibold text-foreground leading-tight"
+                          style={{ fontFamily: "'Poppins', sans-serif" }}
+                        >
+                          {cat.title}
+                          {cat.highlight && (
+                            <span className="ml-1.5 inline-block text-[10px] font-semibold px-1.5 py-0.5 rounded-full" style={{ backgroundColor: "#1f3a5f", color: "#93c5fd" }}>
+                              Key
+                            </span>
+                          )}
+                        </h5>
+                      </div>
+                      <ul className="space-y-1.5">
+                        {cat.points.map((point, pIdx) => (
+                          <li key={pIdx} className="flex gap-2 items-start">
+                            <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ backgroundColor: "#1f3a5f" }} />
+                            <span className="text-xs text-muted-foreground leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                              {point}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
                     </motion.div>
                   ))}
                 </div>
               </div>
+            </div>
+          </motion.div>
+
+          {/* Key Achievements at HOBB */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3
+              className="text-lg font-semibold text-foreground mb-5"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Key Achievements at HOBB
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {achievements.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.07 }}
+                  className="flex flex-col gap-3 p-5 rounded-xl border border-border bg-white shadow-sm hover:border-primary/25 hover:shadow-md transition-all"
+                >
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: "rgba(31,58,95,0.09)", color: "#1f3a5f" }}
+                  >
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
