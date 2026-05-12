@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
-  Server, Network, Cpu, Zap, Activity, Package, Code2, HardDrive
+  Server, Network, Cpu, Zap, Activity, Package, Code2, HardDrive, Cloud
 } from "lucide-react";
 
 const skillCategories = [
@@ -39,6 +39,11 @@ const skillCategories = [
     title: "Software & Licensing",
     icon: <Package className="w-5 h-5" />,
     skills: ["Autodesk License Management", "Adobe License Management", "V-Ray License Management", "License Tracking", "Asset Lifecycle Management"]
+  },
+  {
+    title: "Cloud & DNS",
+    icon: <Cloud className="w-5 h-5" />,
+    skills: ["Microsoft Azure", "Google Cloud (GCP)", "Cloudflare", "Amazon S3", "Reverse Proxy", "DNS Management"]
   },
   {
     title: "Development",
