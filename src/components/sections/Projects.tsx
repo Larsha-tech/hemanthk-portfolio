@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu, Workflow, Database, Shield, Package, MessageSquare,
-  Activity, Thermometer
+  Activity, Thermometer, BookOpen
 } from "lucide-react";
 
 const projects = [
@@ -54,6 +54,14 @@ const projects = [
     problem: "No quick way to broadcast internal messages to office computers.",
     result: "Instant LAN messaging across all office systems with no external dependency.",
     icon: <MessageSquare className="w-6 h-6" />
+  },
+  {
+    title: "IT Help Center",
+    description: "Built an internal IT Help Center web portal providing staff with step-by-step guides for common IT tasks. Covers software setup, VPN access, printer configuration, account management, and troubleshooting — reducing repetitive support requests.",
+    tags: ["Internal Tools", "Knowledge Base", "Web Portal", "IT Support", "Documentation"],
+    problem: "Staff repeatedly raised tickets for the same common IT tasks and issues.",
+    result: "Self-service portal empowering users to resolve issues independently, reducing support load.",
+    icon: <BookOpen className="w-6 h-6" />
   },
   {
     title: "Server Monitoring System",
