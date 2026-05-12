@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Briefcase, Github, Linkedin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function Hero() {
   const handleScrollTo = (href: string) => {
@@ -115,6 +116,15 @@ export function Hero() {
                 aria-label="GitHub"
               >
                 <Github size={17} />
+              </a>
+              <a
+                href="https://wa.me/918088461724?text=Hi%20Hemanth%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg flex items-center justify-center border border-border text-muted-foreground hover:text-[#25D366] hover:border-[#25D366]/40 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={17} />
               </a>
             </div>
           </motion.div>
