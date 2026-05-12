@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu, Workflow, Database, Shield, Package, MessageSquare,
-  Globe, Activity, Thermometer
+  Activity, Thermometer
 } from "lucide-react";
 
 const projects = [
@@ -46,14 +46,6 @@ const projects = [
     problem: "No visibility into software license usage, expiry, or hardware inventory.",
     result: "Complete asset visibility with automated renewal alerts and audit trails.",
     icon: <Package className="w-6 h-6" />
-  },
-  {
-    title: "House of Blue Beans (HOBB) Business Website",
-    description: "Designed and developed the official company website for House of Blue Beans (HOBB). Built with modern web technologies, fully responsive, and optimized for professional online presence.",
-    tags: ["HTML", "CSS", "JavaScript", "Web Design", "Responsive"],
-    problem: "Company lacked an online presence and professional website.",
-    result: "Live business website representing the company's services and brand.",
-    icon: <Globe className="w-6 h-6" />
   },
   {
     title: "Office LAN Messaging Tool",
