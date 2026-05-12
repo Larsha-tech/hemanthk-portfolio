@@ -105,7 +105,7 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}

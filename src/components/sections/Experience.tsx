@@ -272,7 +272,7 @@ export function Experience() {
                 >
                   Key Responsibilities
                 </h4>
-                <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                   {responsibilityCategories.map((cat, idx) => (
                     <motion.div
                       key={idx}

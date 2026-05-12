@@ -105,9 +105,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
+            <div className="relative mx-6 sm:mx-4 lg:mx-0">
               <div
-                className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-xl"
+                className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-xl"
                 style={{ border: "4px solid #1f3a5f" }}
               >
                 <img
@@ -140,7 +140,7 @@ export function Hero() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center text-center py-5 px-4 rounded-xl border border-border bg-secondary/60 shadow-sm hover:shadow-md hover:border-primary/25 transition-all"
+                className="flex flex-col items-center justify-center text-center py-5 px-4 rounded-xl border border-border bg-secondary/60 shadow-sm hover:shadow-md hover:border-primary/25 transition-all last:col-span-2 last:sm:col-span-1"
               >
                 <span className="text-primary/60 mb-2">{stat.icon}</span>
                 <span
