@@ -184,14 +184,18 @@
 
     /* Print */
     @media print {
-      body { background: white; }
+      body { background: white; font-size: 9pt; }
       .print-bar { display: none !important; }
       .page {
         margin: 0;
-        padding: 24px 32px;
+        padding: 20px 28px;
         max-width: 100%;
         box-shadow: none;
       }
+      .section { margin-bottom: 14px; }
+      .job { margin-bottom: 10px; }
+      a { color: inherit !important; text-decoration: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
 </head>
@@ -213,6 +217,7 @@
         <span>+91 80884 61724</span>
         <span>Hennur, Bangalore, Karnataka</span>
         <span><a href="https://www.linkedin.com/in/hemanth-k-8609b4255" target="_blank">linkedin.com/in/hemanth-k-8609b4255</a></span>
+        <span><a href="https://github.com/Larsha-tech" target="_blank">github.com/Larsha-tech</a></span>
       </div>
     </div>
 

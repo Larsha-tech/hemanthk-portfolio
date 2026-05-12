@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Send, Building2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -57,6 +58,7 @@ const contactInfo = [
 
 export function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -67,12 +69,36 @@ export function Contact() {
     },
   });
 
-  function onSubmit(_values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I will get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/mojrrnqd", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (res.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Failed to send",
+          description: "Something went wrong. Please email me at Hemanth2608@hotmail.com",
+          variant: "destructive",
+        });
+      }
+    } catch {
+      toast({
+        title: "Network error",
+        description: "Check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -239,12 +265,13 @@ export function Contact() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full sm:w-auto gap-2 font-medium text-white"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto gap-2 font-medium text-white disabled:opacity-70"
                     style={{ backgroundColor: "var(--portfolio-navy)", fontFamily: "'Inter', sans-serif" }}
                     data-testid="button-send-message"
                   >
                     <Send size={17} />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </Form>

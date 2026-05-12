@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Download, Sun, Moon, Monitor } from "lucide-react";
+import { Menu, X, Download, Sun, Moon, Monitor, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
 
@@ -129,6 +129,16 @@ export function Navbar() {
           >
             <CurrentThemeIcon size={18} />
           </button>
+
+          <a
+            href="https://github.com/Larsha-tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+            aria-label="GitHub"
+          >
+            <Github size={18} />
+          </a>
 
           <Button
             size="sm"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Briefcase } from "lucide-react";
+import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Briefcase, Github, Linkedin } from "lucide-react";
 
 export function Hero() {
   const handleScrollTo = (href: string) => {
@@ -95,6 +95,27 @@ export function Hero() {
                 <Mail size={17} />
                 Contact Me
               </Button>
+            </div>
+
+            <div className="flex items-center gap-2 mt-4">
+              <a
+                href="https://www.linkedin.com/in/hemanth-k-8609b4255"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg flex items-center justify-center border border-border text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={17} />
+              </a>
+              <a
+                href="https://github.com/Larsha-tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg flex items-center justify-center border border-border text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={17} />
+              </a>
             </div>
           </motion.div>
 
