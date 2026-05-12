@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Cpu, Workflow, Database, Shield, Layout, Package, MessageSquare,
+  Cpu, Workflow, Database, Shield, Package, MessageSquare,
   Globe, Activity, Thermometer
 } from "lucide-react";
 
@@ -38,14 +38,6 @@ const projects = [
     problem: "Freelancers had no secure, reliable way to access internal resources remotely.",
     result: "100+ remote users securely connected with zero downtime access.",
     icon: <Shield className="w-6 h-6" />
-  },
-  {
-    title: "Healthcare Portal",
-    description: "PHP and MySQL-based web portal with user authentication, patient/data management, and administrative dashboards. Deployed on Apache with secure access controls.",
-    tags: ["PHP", "MySQL", "Apache", "Web Development", "Authentication"],
-    problem: "Healthcare data was managed manually with no digital tracking system.",
-    result: "Fully functional web portal with user login and structured data management.",
-    icon: <Layout className="w-6 h-6" />
   },
   {
     title: "IT Asset & License Management System",

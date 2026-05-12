@@ -71,7 +71,7 @@ const responsibilityCategories = [
     icon: <Code2 className="w-4 h-4" />,
     points: [
       "Developed internal tools and portals using Python, PHP, and MySQL",
-      "Built healthcare and operational web portals on Apache infrastructure",
+      "Built internal operational web portals on Apache infrastructure",
       "Developed internal LAN communication and monitoring tools",
       "Created centralized systems for IT asset and license management",
     ],
