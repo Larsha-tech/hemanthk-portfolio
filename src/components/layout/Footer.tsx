@@ -125,7 +125,7 @@ export function Footer() {
             className="text-xs text-white/30"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Larsha Technologies, India
+            House of Blue Beans (HOBB), India
           </p>
         </div>
       </div>
