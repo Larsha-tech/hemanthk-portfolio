@@ -56,8 +56,8 @@ const projects = [
     icon: <Package className="w-6 h-6" />
   },
   {
-    title: "Larsha Technologies Business Website",
-    description: "Designed and developed the official company website for Larsha Technologies. Built with modern web technologies, fully responsive, and optimized for professional online presence.",
+    title: "House of Blue Beans (HOBB) Business Website",
+    description: "Designed and developed the official company website for House of Blue Beans (HOBB). Built with modern web technologies, fully responsive, and optimized for professional online presence.",
     tags: ["HTML", "CSS", "JavaScript", "Web Design", "Responsive"],
     problem: "Company lacked an online presence and professional website.",
     result: "Live business website representing the company's services and brand.",

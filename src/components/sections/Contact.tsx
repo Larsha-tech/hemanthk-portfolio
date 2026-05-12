@@ -44,7 +44,7 @@ const contactInfo = [
   {
     icon: <Building2 className="w-5 h-5" />,
     label: "Company",
-    value: "Larsha Technologies",
+    value: "House of Blue Beans (HOBB)",
     href: "#",
   },
   {

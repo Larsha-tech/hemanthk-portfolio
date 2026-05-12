@@ -42,7 +42,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-sm font-semibold text-primary uppercase tracking-widest mb-4 px-3 py-1 bg-primary/8 rounded-full border border-primary/15">
-              IT Infrastructure Specialist
+              IT & Automation Manager · HOBB
             </span>
 
             <h1
@@ -56,7 +56,7 @@ export function Hero() {
               className="text-base md:text-lg font-medium text-primary mb-5 leading-snug"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer
+              Manager - IT, Production Automation & Infrastructure | House of Blue Beans (HOBB)
             </p>
 
             <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -98,7 +98,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Right: Photo Placeholder */}
+          {/* Right: Profile Photo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -106,26 +106,15 @@ export function Hero() {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Outer ring */}
               <div
-                className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl flex items-center justify-center shadow-xl"
-                style={{ backgroundColor: "#1f3a5f" }}
+                className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-xl"
+                style={{ border: "4px solid #1f3a5f" }}
               >
-                {/* Inner initials */}
-                <div className="flex flex-col items-center justify-center gap-3">
-                  <div
-                    className="w-20 h-20 rounded-xl flex items-center justify-center text-3xl font-bold"
-                    style={{ backgroundColor: "rgba(255,255,255,0.15)", color: "#fff", fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    HK
-                  </div>
-                  <p className="text-white/80 text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Hemanth K
-                  </p>
-                  <p className="text-white/60 text-xs text-center px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    IT Infrastructure Specialist
-                  </p>
-                </div>
+                <img
+                  src={`${import.meta.env.BASE_URL}profile.jpg`}
+                  alt="Hemanth K"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Floating badge: top-right */}
@@ -134,7 +123,7 @@ export function Hero() {
               </div>
               {/* Floating badge: bottom-left */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md px-3 py-2 border border-border text-xs font-semibold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                Render Farm Built
+                HOBB
               </div>
             </div>
           </motion.div>

@@ -84,7 +84,7 @@ export function About() {
                 className="text-base text-foreground/80 leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                I am an experienced IT Infrastructure Specialist and IT Manager responsible for the complete IT operations of Larsha Technologies. My role encompasses managing 200+ desktop systems and laptops, maintaining multiple servers including TrueNAS, Proxmox, VMware ESXi, and Windows Server, and ensuring the entire organization's technology runs reliably and efficiently.
+                I am an experienced Manager - IT, Production Automation & Infrastructure responsible for the complete IT operations of House of Blue Beans (HOBB). My role encompasses managing 200+ desktop systems and laptops, maintaining multiple servers including TrueNAS, Proxmox, VMware ESXi, and Windows Server, and ensuring the entire organization's technology runs reliably and efficiently.
               </p>
               <p
                 className="text-base text-foreground/80 leading-relaxed"
@@ -110,8 +110,8 @@ export function About() {
                   Quick Facts
                 </h3>
                 {[
-                  { label: "Role", value: "IT Manager / IT Infrastructure Admin" },
-                  { label: "Company", value: "Larsha Technologies" },
+                  { label: "Role", value: "Manager - IT, Production Automation & Infrastructure" },
+                  { label: "Company", value: "House of Blue Beans (HOBB)" },
                   { label: "Location", value: "Hennur, Bangalore, Karnataka" },
                   { label: "Email", value: "Hemanth2608@hotmail.com" },
                   { label: "Phone", value: "+91 80884 61724" },

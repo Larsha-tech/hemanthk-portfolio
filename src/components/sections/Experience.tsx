@@ -110,7 +110,7 @@ export function Experience() {
 
         <div className="max-w-5xl mx-auto space-y-8">
 
-          {/* Current Role — Larsha Technologies */}
+          {/* Current Role — House of Blue Beans (HOBB) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export function Experience() {
                       className="text-xl font-bold text-white leading-tight"
                       style={{ fontFamily: "'Poppins', sans-serif" }}
                     >
-                      IT Manager / IT Infrastructure Administrator
+                      Manager - IT, Production Automation & Infrastructure
                     </h3>
                     <p className="text-white/70 text-sm mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                       Full-stack IT management — infrastructure, automation, security & support
@@ -144,7 +144,7 @@ export function Experience() {
                 <div className="flex flex-col gap-2 md:items-end shrink-0">
                   <div className="flex items-center gap-2 text-white/80 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <Building2 className="w-4 h-4" />
-                    <span>Larsha Technologies</span>
+                    <span>House of Blue Beans (HOBB)</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/80 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <MapPin className="w-4 h-4" />

@@ -25,7 +25,7 @@ export function Footer() {
               className="text-white/60 text-sm leading-relaxed"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              IT Infrastructure Specialist | IT Manager | Systems Administrator | Automation Engineer
+              Manager - IT, Production Automation & Infrastructure | House of Blue Beans (HOBB)
             </p>
             <div className="flex items-center gap-3 mt-4">
               <a
@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <MapPin size={15} className="text-white/40 shrink-0" />
-                Hennur, Bangalore, Karnataka
+                House of Blue Beans (HOBB), Bangalore
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Linkedin size={15} className="text-white/40 shrink-0" />
