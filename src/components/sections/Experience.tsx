@@ -2,22 +2,12 @@ import { motion } from "framer-motion";
 import { Briefcase, Building2, MapPin, Calendar, CheckCircle2, GraduationCap, BookOpen } from "lucide-react";
 
 const currentResponsibilities = [
-  "Complete IT infrastructure management for the entire organization — servers, networks, and endpoints",
-  "Server management: TrueNAS, Proxmox, VMware ESXi, Windows Server, Linux (Debian/Ubuntu)",
-  "Network management: managed switches, VLANs, access points, and Sophos firewall monitoring",
-  "IT automation: n8n workflows, GLPI ticketing automation, and Slack alert integrations",
-  "User support: managing and maintaining 200+ desktop systems and laptops",
-  "Remote user management: secure VPN access for 100+ freelancers using Tailscale and WireGuard",
-  "Backup systems: NAS backup configuration, automated monitoring, and disaster recovery planning",
-  "Security and access control: user permissions, domain management, firewall policies, and VPN security",
-  "Software license management: Autodesk, Adobe, V-Ray, and other enterprise software licenses",
-  "IT asset management: hardware tracking, lifecycle management, and inventory using GLPI",
-  "Monitoring: Zabbix-based infrastructure monitoring with proactive alerting and dashboards",
-  "PowerShell and Bash scripting for automation, system tasks, and custom internal tools",
-  "Web server management: Apache, PHP, MySQL for internal portals and company website",
-  "IT documentation: maintaining knowledge base, procedures, and runbooks",
-  "Vendor coordination: hardware and software procurement and support management",
-  "Server room management: cable organization, temperature monitoring, and UPS management",
+  "Own and operate the full IT stack for 200+ users — servers, network, endpoints, and security.",
+  "Enable secure remote access for 100+ distributed freelancers via Tailscale and WireGuard VPN.",
+  "Automated all IT ticketing, alerts, and daily reports with n8n, GLPI, and Slack — zero manual overhead.",
+  "Proactive infrastructure and environment monitoring with Zabbix; issues resolved before user impact.",
+  "Manage enterprise software license compliance and hardware asset lifecycle via centralized GLPI.",
+  "Centralized NAS storage with automated backups, disaster recovery planning, and server room management.",
 ];
 
 const previousRoles = [

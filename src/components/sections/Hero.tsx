@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Network } from "lucide-react";
+import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Briefcase } from "lucide-react";
 
 export function Hero() {
   const handleScrollTo = (href: string) => {
@@ -17,10 +17,10 @@ export function Hero() {
 
   const stats = [
     { value: "200+", label: "Systems Managed", icon: <Monitor className="w-5 h-5" /> },
-    { value: "100+", label: "Remote Users Supported", icon: <Users className="w-5 h-5" /> },
-    { value: "Multiple", label: "Servers Managed", icon: <Server className="w-5 h-5" /> },
-    { value: "Various", label: "Automation Systems", icon: <Cpu className="w-5 h-5" /> },
-    { value: "1", label: "Render Farm Built", icon: <Network className="w-5 h-5" /> },
+    { value: "100+", label: "Remote Users", icon: <Users className="w-5 h-5" /> },
+    { value: "6+", label: "Years Experience", icon: <Briefcase className="w-5 h-5" /> },
+    { value: "10", label: "Projects Delivered", icon: <Cpu className="w-5 h-5" /> },
+    { value: "5+", label: "Servers Maintained", icon: <Server className="w-5 h-5" /> },
   ];
 
   return (

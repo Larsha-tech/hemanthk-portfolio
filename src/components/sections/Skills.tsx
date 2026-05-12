@@ -1,55 +1,50 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
-  Server, Network, Cpu, Zap, Activity, Package, Code2, HardDrive, ShieldCheck
+  Server, Network, Cpu, Zap, Activity, Package, Code2, HardDrive
 } from "lucide-react";
 
 const skillCategories = [
   {
     title: "IT Infrastructure",
     icon: <Server className="w-5 h-5" />,
-    skills: ["IT Infrastructure Management", "IT Operations Management", "System Administration", "Technical Support", "IT Asset Management", "Backup Management", "Access Control Management"]
+    skills: ["System Administration", "IT Asset Management", "Access Control", "Backup Management", "GLPI", "User & Domain Management"]
   },
   {
-    title: "Networking",
+    title: "Networking & Security",
     icon: <Network className="w-5 h-5" />,
-    skills: ["Switch Management", "VLAN Configuration", "Firewall Management (Sophos)", "VPN Setup", "Remote Access Setup", "Network Troubleshooting", "Access Point Management"]
+    skills: ["VLAN Configuration", "Switch Management", "Sophos Firewall", "Tailscale VPN", "WireGuard", "Access Point Management", "User Permission Management"]
   },
   {
     title: "Servers & Virtualization",
     icon: <Cpu className="w-5 h-5" />,
-    skills: ["TrueNAS", "Proxmox", "VMware ESXi", "Windows Server", "Linux Servers (Debian/Ubuntu)", "Storage Servers", "Virtual Machines", "Docker (Basic)"]
+    skills: ["TrueNAS", "Proxmox", "VMware ESXi", "Windows Server", "Linux (Debian/Ubuntu)", "NAS Storage", "Disaster Recovery"]
   },
   {
     title: "Automation & Scripting",
     icon: <Zap className="w-5 h-5" />,
-    skills: ["n8n Automation", "GLPI Automation", "Slack Automation", "PowerShell Scripting", "Bash Scripting", "Task Automation", "Process Automation"]
+    skills: ["n8n Workflows", "GLPI Automation", "Slack Integrations", "PowerShell Scripting", "Bash Scripting"]
   },
   {
-    title: "Monitoring Tools",
+    title: "Monitoring",
     icon: <Activity className="w-5 h-5" />,
-    skills: ["Zabbix", "GLPI", "System Monitoring", "Network Monitoring", "Backup Monitoring", "Temperature Monitoring", "UPS Monitoring"]
-  },
-  {
-    title: "Software & Licensing",
-    icon: <Package className="w-5 h-5" />,
-    skills: ["Autodesk License Management", "Adobe License Management", "V-Ray License Management", "Software Deployment", "Patch Management", "License Tracking"]
-  },
-  {
-    title: "Development",
-    icon: <Code2 className="w-5 h-5" />,
-    skills: ["Basic Python", "PHP", "MySQL", "HTML", "CSS", "JavaScript (Basic)", "Building Internal Tools", "Web Portals", "Apache Web Server"]
+    skills: ["Zabbix", "Infrastructure Alerting", "SNMP Monitoring", "Temperature Monitoring", "UPS Monitoring", "Dashboard Management"]
   },
   {
     title: "Storage & Backup",
     icon: <HardDrive className="w-5 h-5" />,
-    skills: ["NAS Storage Management", "TrueNAS Administration", "Backup Planning", "Backup Monitoring", "Data Recovery", "Shared Storage", "RAID Management"]
+    skills: ["NAS Administration", "Backup Planning", "Backup Monitoring", "Data Recovery", "Shared Storage", "RAID Management"]
   },
   {
-    title: "Security",
-    icon: <ShieldCheck className="w-5 h-5" />,
-    skills: ["Firewall Monitoring", "VPN Management", "Tailscale", "WireGuard", "Access Control", "User Permission Management", "Remote Access Security"]
-  }
+    title: "Software & Licensing",
+    icon: <Package className="w-5 h-5" />,
+    skills: ["Autodesk License Management", "Adobe License Management", "V-Ray License Management", "License Tracking", "Asset Lifecycle Management"]
+  },
+  {
+    title: "Development",
+    icon: <Code2 className="w-5 h-5" />,
+    skills: ["PHP", "MySQL", "Apache", "Python", "HTML / CSS / JS", "Internal Web Portals"]
+  },
 ];
 
 export function Skills() {

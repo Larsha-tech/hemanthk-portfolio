@@ -1,58 +1,38 @@
 import { motion } from "framer-motion";
 import {
-  Server, Shield, Activity, Users, Cloud, Zap, HardDrive, FileText, Network, Thermometer
+  Server, Shield, Activity, Users, Zap, HardDrive
 } from "lucide-react";
 
 const highlights = [
   {
     icon: <Server className="w-5 h-5" />,
-    title: "Infrastructure Management",
-    desc: "Managing 200+ desktop systems, laptops, and multiple servers including TrueNAS, Proxmox, VMware ESXi, and Windows Server.",
+    title: "Infrastructure at Scale",
+    desc: "200+ endpoints, multi-server environment, and the full network — kept running reliably around the clock.",
   },
   {
     icon: <Users className="w-5 h-5" />,
-    title: "Remote User Support",
-    desc: "Supporting 100+ remote freelancers with secure access via Tailscale and WireGuard VPN solutions.",
-  },
-  {
-    icon: <Network className="w-5 h-5" />,
-    title: "Network Management",
-    desc: "Configuring and managing switches, VLANs, access points, and monitoring firewalls (Sophos) for secure network operations.",
+    title: "Remote Workforce Access",
+    desc: "Always-on, zero-downtime VPN connectivity for 100+ distributed freelancers.",
   },
   {
     icon: <Zap className="w-5 h-5" />,
     title: "IT Automation",
-    desc: "Streamlining IT operations using n8n, GLPI, and Slack integrations. Writing PowerShell and Bash scripts to automate repetitive tasks.",
+    desc: "Ticket alerts, daily reports, and workflows fully automated — manual effort reduced to near zero.",
   },
   {
     icon: <Activity className="w-5 h-5" />,
-    title: "Monitoring & Alerting",
-    desc: "Proactive infrastructure monitoring with Zabbix, temperature monitoring for the server room, and UPS power management.",
+    title: "Proactive Monitoring",
+    desc: "Real-time alerts across servers, network, and server room environment. Issues resolved before users notice.",
   },
   {
     icon: <HardDrive className="w-5 h-5" />,
-    title: "Storage & Backup",
-    desc: "Managing NAS shared storage, automated backup systems, data recovery planning, and backup monitoring.",
-  },
-  {
-    icon: <Cloud className="w-5 h-5" />,
-    title: "License & Asset Management",
-    desc: "Tracking software licenses (Autodesk, Adobe, V-Ray) and hardware assets through a centralized GLPI system.",
+    title: "Data Protection",
+    desc: "Centralized shared storage, automated backup schedules, and tested disaster recovery procedures.",
   },
   {
     icon: <Shield className="w-5 h-5" />,
-    title: "Security & Access Control",
-    desc: "Managing user permissions, domain accounts, VPN access, and firewall policies to maintain a secure IT environment.",
-  },
-  {
-    icon: <FileText className="w-5 h-5" />,
-    title: "Documentation & Vendor Coordination",
-    desc: "Maintaining IT knowledge base, procedure documentation, and coordinating with hardware/software vendors.",
-  },
-  {
-    icon: <Thermometer className="w-5 h-5" />,
-    title: "Server Room Management",
-    desc: "Cable management, server room setup, temperature monitoring, and UPS power management to ensure hardware longevity.",
+    title: "Software Compliance",
+    desc: "License tracking for Autodesk, Adobe & V-Ray with renewal alerts and complete audit trails.",
   },
 ];
 
@@ -84,19 +64,13 @@ export function About() {
                 className="text-base text-foreground/80 leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                I am an experienced Manager - IT, Production Automation & Infrastructure responsible for the complete IT operations of House of Blue Beans (HOBB). My role encompasses managing 200+ desktop systems and laptops, maintaining multiple servers including TrueNAS, Proxmox, VMware ESXi, and Windows Server, and ensuring the entire organization's technology runs reliably and efficiently.
+                I manage the complete IT operations of House of Blue Beans (HOBB) — 200+ endpoints, multi-server infrastructure, network security, and automation pipelines that keep the organization running efficiently at all times.
               </p>
               <p
                 className="text-base text-foreground/80 leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                I architect and maintain the network infrastructure — including managed switches, VLANs, access points, and Sophos firewall — and provide secure remote access for 100+ freelancers through Tailscale and WireGuard VPN. My expertise in automation (n8n, GLPI, Slack, PowerShell, Bash) has significantly reduced manual workload across the IT department.
-              </p>
-              <p
-                className="text-base text-foreground/80 leading-relaxed"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Beyond day-to-day operations, I have built specialized systems including a distributed Unreal Engine render farm, centralized NAS storage, healthcare web portals, and comprehensive monitoring infrastructure. I manage software license compliance for Autodesk, Adobe, and V-Ray tools, maintain server room infrastructure with temperature monitoring and UPS management, and document all IT procedures to build a solid knowledge base for the organization.
+                My approach is systems-first: build once, automate everything, monitor proactively. From centralized storage and VPN access for 100+ remote freelancers to zero-manual ticketing and real-time infrastructure alerts, every solution is designed to reduce operational overhead and prevent downtime.
               </p>
             </div>
 
@@ -135,15 +109,15 @@ export function About() {
             </div>
           </div>
 
-          {/* Responsibilities grid */}
+          {/* Competencies grid */}
           <div>
             <h3
               className="text-xl font-semibold text-foreground mb-8"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Key Responsibilities
+              Core Competencies
             </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {highlights.map((item, index) => (
                 <motion.div
                   key={index}
