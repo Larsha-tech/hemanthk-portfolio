@@ -112,11 +112,12 @@ export function About() {
                 {[
                   { label: "Role", value: "IT Manager / IT Infrastructure Admin" },
                   { label: "Company", value: "Larsha Technologies" },
-                  { label: "Location", value: "India" },
+                  { label: "Location", value: "Hennur, Bangalore, Karnataka" },
+                  { label: "Email", value: "Hemanth2608@hotmail.com" },
+                  { label: "Phone", value: "+91 80884 61724" },
+                  { label: "Experience", value: "6+ Years" },
                   { label: "Systems", value: "200+ Managed" },
-                  { label: "Remote Users", value: "100+ Supported" },
-                  { label: "Core Platforms", value: "TrueNAS, Proxmox, VMware, Windows Server" },
-                  { label: "Automation", value: "n8n, GLPI, Slack, PowerShell, Bash" },
+                  { label: "Languages", value: "English, Tamil, Kannada, Hindi, Telugu" },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm">
                     <span

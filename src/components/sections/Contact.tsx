@@ -26,14 +26,14 @@ const contactInfo = [
   {
     icon: <Mail className="w-5 h-5" />,
     label: "Email",
-    value: "hemanth@larshatechnologies.com",
-    href: "mailto:hemanth@larshatechnologies.com",
+    value: "Hemanth2608@hotmail.com",
+    href: "mailto:Hemanth2608@hotmail.com",
   },
   {
     icon: <Phone className="w-5 h-5" />,
     label: "Phone",
-    value: "+91 XXXXX XXXXX",
-    href: "tel:+91XXXXXXXXXX",
+    value: "+91 80884 61724",
+    href: "tel:+918088461724",
   },
   {
     icon: <Linkedin className="w-5 h-5" />,
@@ -50,7 +50,7 @@ const contactInfo = [
   {
     icon: <MapPin className="w-5 h-5" />,
     label: "Location",
-    value: "India",
+    value: "Hennur, Bangalore, Karnataka",
     href: "#",
   },
 ];

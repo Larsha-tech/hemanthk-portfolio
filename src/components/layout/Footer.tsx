@@ -37,7 +37,7 @@ export function Footer() {
                 <Linkedin size={17} className="text-white" />
               </a>
               <a
-                href="mailto:hemanth@larshatechnologies.com"
+                href="mailto:Hemanth2608@hotmail.com"
                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
                 style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
                 aria-label="Email"
@@ -45,7 +45,7 @@ export function Footer() {
                 <Mail size={17} className="text-white" />
               </a>
               <a
-                href="tel:+91XXXXXXXXXX"
+                href="tel:+918088461724"
                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-white/20"
                 style={{ backgroundColor: "rgba(255,255,255,0.10)" }}
                 aria-label="Phone"
@@ -96,15 +96,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Mail size={15} className="text-white/40 shrink-0" />
-                hemanth@larshatechnologies.com
+                Hemanth2608@hotmail.com
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Phone size={15} className="text-white/40 shrink-0" />
-                +91 XXXXX XXXXX
+                +91 80884 61724
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <MapPin size={15} className="text-white/40 shrink-0" />
-                Larsha Technologies, India
+                Hennur, Bangalore, Karnataka
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Linkedin size={15} className="text-white/40 shrink-0" />
