@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemanth K — Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1a1a1a;
+      background: #f3f4f6;
+      font-size: 10pt;
+      line-height: 1.5;
+    }
+
+    /* Print bar */
+    .print-bar {
+      background: #1f3a5f;
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .print-bar button {
+      background: white;
+      color: #1f3a5f;
+      border: none;
+      padding: 7px 22px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+    .print-bar button:hover { background: #e0e7ff; }
+
+    /* Page */
+    .page {
+      max-width: 820px;
+      margin: 24px auto;
+      background: white;
+      padding: 40px 48px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+
+    /* Header */
+    .header { margin-bottom: 22px; }
+    .name {
+      font-size: 26pt;
+      font-weight: 800;
+      color: #1f3a5f;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .job-title-top {
+      font-size: 11pt;
+      color: #374151;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 10px;
+      font-size: 9pt;
+      color: #4b5563;
+      border-top: 2px solid #1f3a5f;
+      padding-top: 10px;
+    }
+    .contact-row a { color: #1f3a5f; text-decoration: none; }
+
+    /* Section */
+    .section { margin-bottom: 20px; }
+    .section-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #1f3a5f;
+      border-bottom: 1.5px solid #dbeafe;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary { font-size: 9.5pt; color: #374151; line-height: 1.65; }
+
+    /* Experience */
+    .job { margin-bottom: 13px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .job-title-text {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #111827;
+    }
+    .job-company-text {
+      font-size: 9.5pt;
+      color: #1f3a5f;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+    .job-period {
+      font-size: 8.5pt;
+      color: #6b7280;
+      white-space: nowrap;
+      margin-top: 2px;
+      font-weight: 600;
+      text-align: right;
+    }
+    .current-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: #93c5fd;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+    }
+    .job ul {
+      margin-top: 6px;
+      padding-left: 14px;
+    }
+    .job li {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 3px;
+      line-height: 1.55;
+    }
+
+    /* Achievements */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 24px;
+    }
+    .ach-item {
+      font-size: 9.5pt;
+      color: #374151;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .ach-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #1f3a5f;
+      font-size: 9pt;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .skill-row { font-size: 9.5pt; line-height: 1.55; }
+    .skill-label { font-weight: 700; color: #111827; }
+    .skill-values { color: #4b5563; }
+
+    /* Education */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 7px;
+    }
+    .edu-degree-text { font-size: 10pt; font-weight: 600; color: #111827; }
+    .edu-school-text { font-size: 9pt; color: #4b5563; margin-top: 1px; }
+    .edu-year { font-size: 9pt; color: #6b7280; font-weight: 600; white-space: nowrap; }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .print-bar { display: none !important; }
+      .page {
+        margin: 0;
+        padding: 24px 32px;
+        max-width: 100%;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <span>To download: click <strong>Save as PDF</strong> and choose "Save as PDF" as the destination</span>
+    <button onclick="window.print()">Save as PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="name">Hemanth K</div>
+      <div class="job-title-top">Manager — IT, Production Automation &amp; Infrastructure &nbsp;|&nbsp; House of Blue Beans (HOBB)</div>
+      <div class="contact-row">
+        <span>Hemanth2608@hotmail.com</span>
+        <span>+91 80884 61724</span>
+        <span>Hennur, Bangalore, Karnataka</span>
+        <span><a href="https://www.linkedin.com/in/hemanth-k-8609b4255" target="_blank">linkedin.com/in/hemanth-k-8609b4255</a></span>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        IT Manager with 6+ years of experience owning complete IT operations for House of Blue Beans (HOBB). Expertise spans server administration (TrueNAS, Proxmox, VMware ESXi), network infrastructure, VPN and security, and automation workflows. Managed 200+ endpoints, enabled secure remote access for 100+ freelancers, built a distributed Unreal Engine render farm, and automated IT operations reducing manual workload to near zero. Experienced across cloud platforms (Azure, GCP, Cloudflare) and enterprise license management.
+      </p>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="section">
+      <div class="section-title">Work Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title-text">Manager — IT, Production Automation &amp; Infrastructure</div>
+            <div class="job-company-text">House of Blue Beans (HOBB) &nbsp;·&nbsp; Bangalore, India</div>
+          </div>
+          <div class="job-period"><span class="current-badge">CURRENT</span></div>
+        </div>
+        <ul>
+          <li>Own and operate the full IT stack for 200+ users — servers, network, endpoints, security, and end-user support</li>
+          <li>Built and maintained distributed Unreal Engine render farm, significantly reducing production turnaround time</li>
+          <li>Implemented VPN-based remote access for 100+ freelancers using Tailscale and WireGuard</li>
+          <li>Automated all IT ticketing, alerts, and daily reports with n8n, GLPI, and Slack — zero manual overhead</li>
+          <li>Designed secure office network with VLAN segmentation, Sophos firewall, and access control policies</li>
+          <li>Deployed Zabbix monitoring with proactive alerting across servers, network, and server room environment</li>
+          <li>Managed enterprise software license compliance for Autodesk, Adobe, and V-Ray suites via centralized GLPI</li>
+          <li>Managed workstation imaging, OS deployment, hardware lifecycle, and IT asset tracking</li>
+          <li>Planned and maintained server room infrastructure including UPS and temperature monitoring systems</li>
+          <li>Developed IT Help Center portal providing staff with self-service step-by-step IT guides</li>
+          <li>Managed end-to-end IT operations independently, coordinating across production, design, and operations teams</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title-text">IT Administrator</div>
+            <div class="job-company-text">Coequal Services &nbsp;·&nbsp; Bangalore, India</div>
+          </div>
+          <div class="job-period">Jan 2023 – Sep 2023</div>
+        </div>
+        <ul>
+          <li>Directed IT budget analysis and identified impactful infrastructure enhancements for clients</li>
+          <li>Led technical upgrade projects coordinating with consultants and developers</li>
+          <li>Designed and evaluated WAN/LAN connectivity and optimized network performance</li>
+          <li>Diagnosed and resolved hardware, software, and network issues across client environments</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title-text">Office Administrator</div>
+            <div class="job-company-text">Olympus Medical Systems India Pvt Ltd &nbsp;·&nbsp; Bangalore, India</div>
+          </div>
+          <div class="job-period">2019 – 2021</div>
+        </div>
+        <ul>
+          <li>Managed day-to-day administrative operations, communications, and recordkeeping functions</li>
+          <li>Coordinated payroll processing and maintained electronic filing systems</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title-text">Office Administrator</div>
+            <div class="job-company-text">Mipl Global &nbsp;·&nbsp; Bangalore, India</div>
+          </div>
+          <div class="job-period">2021 – 2022</div>
+        </div>
+        <ul>
+          <li>Assisted executive management with scheduling, coordination, and client communications</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title-text">Field Representative</div>
+            <div class="job-company-text">HBS (Halcyon Business Solutions) &nbsp;·&nbsp; Bangalore, India</div>
+          </div>
+          <div class="job-period">2018 – 2019</div>
+        </div>
+        <ul>
+          <li>Visited client sites for on-site support and customer relationship management</li>
+          <li>Submitted performance reports to senior management to support business decisions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Key Achievements -->
+    <div class="section">
+      <div class="section-title">Key Achievements</div>
+      <div class="achievements-grid">
+        <div class="ach-item">Built distributed Unreal Engine render farm for production at HOBB</div>
+        <div class="ach-item">Automated IT operations — zero manual ticketing or reporting</div>
+        <div class="ach-item">Managed complete IT infrastructure for 200+ systems</div>
+        <div class="ach-item">Enabled secure remote work for 100+ freelancers via VPN</div>
+        <div class="ach-item">Built IT Help Center portal reducing repetitive support tickets</div>
+        <div class="ach-item">Deployed Zabbix monitoring reducing infrastructure downtime</div>
+        <div class="ach-item">Centralized NAS storage with automated backup and disaster recovery</div>
+        <div class="ach-item">Led full server room setup, virtualization, and process automation</div>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-label">Servers &amp; Virtualization: </span><span class="skill-values">TrueNAS, Proxmox, VMware ESXi, Windows Server, Linux (Debian/Ubuntu)</span></div>
+        <div class="skill-row"><span class="skill-label">Networking &amp; Security: </span><span class="skill-values">VLANs, Sophos Firewall, Tailscale, WireGuard, Switch &amp; AP Management</span></div>
+        <div class="skill-row"><span class="skill-label">Automation &amp; Scripting: </span><span class="skill-values">n8n, GLPI Automation, Slack Integrations, PowerShell, Bash</span></div>
+        <div class="skill-row"><span class="skill-label">Monitoring: </span><span class="skill-values">Zabbix, Infrastructure Alerting, Temperature &amp; UPS Monitoring</span></div>
+        <div class="skill-row"><span class="skill-label">Cloud &amp; DNS: </span><span class="skill-values">Microsoft Azure, Google Cloud (GCP), Cloudflare, Amazon S3, DNS Management</span></div>
+        <div class="skill-row"><span class="skill-label">Software &amp; Licensing: </span><span class="skill-values">Autodesk, Adobe, V-Ray License Management, Asset Lifecycle (GLPI)</span></div>
+        <div class="skill-row"><span class="skill-label">Development: </span><span class="skill-values">PHP, MySQL, Apache, Python, HTML / CSS / JS</span></div>
+        <div class="skill-row"><span class="skill-label">Languages: </span><span class="skill-values">English, Tamil, Kannada, Hindi, Telugu</span></div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree-text">ITI Diploma in Electronics</div>
+          <div class="edu-school-text">ITI</div>
+        </div>
+        <div class="edu-year">2016 – 2017</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree-text">High School Diploma</div>
+          <div class="edu-school-text">St Patrick's Boys High School</div>
+        </div>
+        <div class="edu-year">2015 – 2016</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

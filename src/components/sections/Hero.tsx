@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   const handleDownloadResume = () => {
-    alert("Resume download will be available once your resume file is uploaded.");
+    window.open(`${import.meta.env.BASE_URL}resume.html`, '_blank');
   };
 
   const stats = [
