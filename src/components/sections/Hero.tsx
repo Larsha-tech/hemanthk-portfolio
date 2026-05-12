@@ -68,7 +68,7 @@ export function Hero() {
               <Button
                 size="lg"
                 className="gap-2 font-medium"
-                style={{ backgroundColor: "#1f3a5f", color: "#fff" }}
+                style={{ backgroundColor: "var(--portfolio-navy)", color: "#fff" }}
                 onClick={() => handleScrollTo("#projects")}
                 data-testid="button-view-projects"
               >
@@ -108,7 +108,7 @@ export function Hero() {
             <div className="relative mx-6 sm:mx-4 lg:mx-0">
               <div
                 className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-xl"
-                style={{ border: "4px solid #1f3a5f" }}
+                style={{ border: "4px solid var(--portfolio-navy)" }}
               >
                 <img
                   src={`${import.meta.env.BASE_URL}profile.jpg`}

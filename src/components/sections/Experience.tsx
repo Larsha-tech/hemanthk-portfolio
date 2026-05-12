@@ -211,7 +211,7 @@ export function Experience() {
           >
             Work Experience
           </h2>
-          <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-navy)" }}></div>
+          <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
         </motion.div>
 
         <div className="max-w-5xl mx-auto space-y-8">
@@ -280,7 +280,7 @@ export function Experience() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: idx * 0.05 }}
-                      className={`rounded-lg p-4 border ${cat.highlight ? "border-blue-200 bg-blue-50/60" : "border-border/60 bg-secondary/30"}`}
+                      className={`rounded-lg p-4 border ${cat.highlight ? "border-blue-200 bg-blue-50/60 dark:border-blue-800/50 dark:bg-blue-950/30" : "border-border/60 bg-secondary/30"}`}
                     >
                       <div className="flex items-center gap-2 mb-3">
                         <span style={{ color: "var(--portfolio-accent)" }}>{cat.icon}</span>
@@ -290,7 +290,7 @@ export function Experience() {
                         >
                           {cat.title}
                           {cat.highlight && (
-                            <span className="ml-1.5 inline-block text-[10px] font-semibold px-1.5 py-0.5 rounded-full" style={{ backgroundColor: "#1f3a5f", color: "#93c5fd" }}>
+                            <span className="ml-1.5 inline-block text-[10px] font-semibold px-1.5 py-0.5 rounded-full" style={{ backgroundColor: "var(--portfolio-navy)", color: "#93c5fd" }}>
                               Key
                             </span>
                           )}
