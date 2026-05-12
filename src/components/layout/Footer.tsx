@@ -106,7 +106,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <MapPin size={15} className="text-white/40 shrink-0" />
-                House of Blue Beans (HOBB), Bangalore
+                Hennur, Bangalore, Karnataka
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <Linkedin size={15} className="text-white/40 shrink-0" />
@@ -127,7 +127,7 @@ export function Footer() {
             className="text-xs text-white/30"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            House of Blue Beans (HOBB), India
+            Hennur, Bangalore, Karnataka
           </p>
         </div>
       </div>
