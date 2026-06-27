@@ -9,7 +9,7 @@ import {
 const projects = [
   {
     title: "Unreal Engine Distributed Render Farm",
-    description: "Built a distributed render farm system with a master node and multiple render nodes. Features job distribution, node status monitoring, and per-node job cancellation. Significantly reduced render time and improved studio workflow efficiency.",
+    description: "Built a distributed render farm system with a master node and multiple render nodes. Features job distribution, node status monitoring, and per-node job cancellation. Cut render times noticeably and streamlined studio workflow across the team.",
     tags: ["Distributed Computing", "Node Management", "Job Scheduling", "Rendering"],
     problem: "Manual rendering was slow and could not utilize multiple machines.",
     result: "Automated multi-node rendering with centralized job management.",
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     title: "IT Automation System (n8n + GLPI + Slack)",
-    description: "Automated IT ticket alerts to Slack, daily IT reports, and system notifications using n8n workflows and GLPI integration. Dramatically reduced manual IT work and improved team response times.",
+    description: "Automated IT ticket alerts to Slack, daily IT reports, and system notifications using n8n workflows and GLPI integration. Eliminated nearly all manual IT work and improved team response times.",
     tags: ["n8n", "GLPI", "Slack", "Automation", "Webhooks"],
     problem: "Manual ticket tracking and reporting consumed significant IT time.",
     result: "Fully automated notifications and daily reports with zero manual effort.",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: "IT Asset & License Management System",
-    description: "Comprehensive tracking system for software licenses (Autodesk, Adobe, V-Ray), hardware assets, and user assignments. Built on GLPI with custom automation for alerts and renewals.",
+    description: "Centralized tracking system for software licenses (Autodesk, Adobe, V-Ray), hardware assets, and user assignments. Built on GLPI with custom automation for expiry alerts and renewals.",
     tags: ["GLPI", "Asset Management", "License Tracking", "Autodesk", "Adobe"],
     problem: "No visibility into software license usage, expiry, or hardware inventory.",
     result: "Complete asset visibility with automated renewal alerts and audit trails.",
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     title: "IT Help Center",
-    description: "Built an internal IT Help Center web portal providing staff with step-by-step guides for common IT tasks. Covers software setup, VPN access, printer configuration, account management, and troubleshooting — reducing repetitive support requests.",
+    description: "Built an internal IT Help Center web portal with step-by-step guides for the most common staff IT tasks. Covers software setup, VPN access, printer configuration, account management, and general troubleshooting.",
     tags: ["Internal Tools", "Knowledge Base", "Web Portal", "IT Support", "Documentation"],
     problem: "Staff repeatedly raised tickets for the same common IT tasks and issues.",
     result: "Self-service portal empowering users to resolve issues independently, reducing support load.",
@@ -66,7 +66,7 @@ const projects = [
   },
   {
     title: "Server Monitoring System",
-    description: "Comprehensive server and infrastructure monitoring setup using Zabbix. Covers CPU, memory, disk, network, and service uptime with automated alerting for critical thresholds.",
+    description: "Full server and infrastructure monitoring built on Zabbix. Covers CPU, memory, disk, network, and service uptime with automated alerting for critical thresholds.",
     tags: ["Zabbix", "Monitoring", "Alerting", "SNMP", "Infrastructure"],
     problem: "Server issues were only discovered after users reported them.",
     result: "Proactive alerts and dashboards enabling issues to be resolved before impact.",
