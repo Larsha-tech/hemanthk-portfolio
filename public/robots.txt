@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f1hunterr.github.io/hemanthk-portfolio/sitemap.xml
