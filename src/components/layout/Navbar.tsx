@@ -84,7 +84,7 @@ export function Navbar() {
             HK
           </span>
           <span
-            className="font-semibold text-base hidden sm:inline-block"
+            className="font-semibold text-base hidden lg:inline-block"
             style={{ color: "var(--portfolio-accent)", fontFamily: "'Poppins', sans-serif" }}
           >
             Hemanth K
