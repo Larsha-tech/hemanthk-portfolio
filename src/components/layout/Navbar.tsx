@@ -51,7 +51,7 @@ export function Navbar() {
   };
 
   const handleDownloadResume = () => {
-    window.open(`${import.meta.env.BASE_URL}resume.html`, "_blank");
+    window.open(`${import.meta.env.BASE_URL}resume.html`, "_blank", "noopener,noreferrer");
   };
 
   const cycleTheme = () => {

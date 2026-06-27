@@ -13,7 +13,7 @@ export function Hero() {
   };
 
   const handleDownloadResume = () => {
-    window.open(`${import.meta.env.BASE_URL}resume.html`, '_blank');
+    window.open(`${import.meta.env.BASE_URL}resume.html`, '_blank', 'noopener,noreferrer');
   };
 
   const stats = [
