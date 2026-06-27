@@ -57,7 +57,7 @@ export function About() {
             <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12 mb-16">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
             {/* Left: Summary text */}
             <div className="lg:col-span-3 space-y-5">
               <p
@@ -117,7 +117,7 @@ export function About() {
             >
               Core Competencies
             </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {highlights.map((item, index) => (
                 <motion.div
                   key={index}

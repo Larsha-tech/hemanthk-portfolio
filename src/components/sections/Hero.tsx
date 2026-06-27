@@ -13,7 +13,7 @@ export function Hero() {
   };
 
   const handleDownloadResume = () => {
-    window.open(`${import.meta.env.BASE_URL}resume.html`, '_blank');
+    window.open(`${import.meta.env.BASE_URL}resume.html`, '_blank', 'noopener,noreferrer');
   };
 
   const stats = [
@@ -34,7 +34,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
 
           {/* Left: Text Content */}
           <motion.div
@@ -134,9 +134,9 @@ export function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center md:justify-end"
           >
-            <div className="relative mx-6 sm:mx-4 lg:mx-0">
+            <div className="relative mx-6 sm:mx-4 md:mx-0">
               <div
                 className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-xl"
                 style={{ border: "4px solid var(--portfolio-navy)" }}

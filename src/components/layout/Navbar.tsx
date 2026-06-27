@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Download, Sun, Moon, Monitor, Github } from "lucide-react";
+import { Menu, X, Download, Sun, Moon, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
 
@@ -14,7 +14,6 @@ const NAV_LINKS = [
 
 const THEME_OPTIONS = [
   { value: "light" as const, icon: Sun, label: "Light" },
-  { value: "system" as const, icon: Monitor, label: "System" },
   { value: "dark" as const, icon: Moon, label: "Dark" },
 ];
 
@@ -51,7 +50,7 @@ export function Navbar() {
   };
 
   const handleDownloadResume = () => {
-    window.open(`${import.meta.env.BASE_URL}resume.html`, "_blank");
+    window.open(`${import.meta.env.BASE_URL}resume.html`, "_blank", "noopener,noreferrer");
   };
 
   const cycleTheme = () => {
@@ -60,7 +59,7 @@ export function Navbar() {
   };
 
   const CurrentThemeIcon =
-    THEME_OPTIONS.find((t) => t.value === theme)?.icon ?? Monitor;
+    THEME_OPTIONS.find((t) => t.value === theme)?.icon ?? Sun;
 
   return (
     <header
@@ -85,7 +84,7 @@ export function Navbar() {
             HK
           </span>
           <span
-            className="font-semibold text-base hidden sm:inline-block"
+            className="font-semibold text-base hidden lg:inline-block"
             style={{ color: "var(--portfolio-accent)", fontFamily: "'Poppins', sans-serif" }}
           >
             Hemanth K
