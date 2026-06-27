@@ -104,9 +104,14 @@ export function Skills() {
                   {category.skills.map((skill, sIdx) => (
                     <Badge
                       key={sIdx}
-                      variant="secondary"
-                      className="px-2.5 py-1 text-xs font-medium bg-white dark:bg-secondary/50 border border-border/70 text-muted-foreground hover:border-primary/30 hover:text-primary transition-colors"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
+                      variant="outline"
+                      className="px-2.5 py-1 text-xs font-medium transition-colors"
+                      style={{
+                        backgroundColor: "var(--portfolio-icon-bg)",
+                        color: "var(--portfolio-accent)",
+                        borderColor: "var(--portfolio-icon-bg)",
+                        fontFamily: "'Inter', sans-serif",
+                      }}
                     >
                       {skill}
                     </Badge>
