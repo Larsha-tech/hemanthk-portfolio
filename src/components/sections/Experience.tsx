@@ -54,8 +54,8 @@ const responsibilityCategories = [
     points: [
       "Built and maintained distributed Unreal Engine render farm infrastructure",
       "Automated render job distribution and monitored node status across the farm",
-      "Optimized rendering workflows, significantly reducing production turnaround time",
-      "Managed render node deployment and centralized rendering management workflows",
+      "Optimized rendering workflows and cut production turnaround time",
+      "Managed render node deployment and centralized job management across the farm",
     ],
   },
   {
@@ -72,9 +72,9 @@ const responsibilityCategories = [
     title: "Development & Internal Platforms",
     icon: <Code2 className="w-4 h-4" />,
     points: [
-      "Developed internal tools and portals using Python, PHP, and MySQL",
-      "Built internal operational web portals on Apache infrastructure",
-      "Developed internal LAN communication and monitoring tools",
+      "Developed tools and web portals using Python, PHP, and MySQL",
+      "Hosted and maintained operational web portals on Apache infrastructure",
+      "Built LAN communication tools and custom IT monitoring scripts",
       "Created centralized systems for IT asset and license management",
     ],
   },
@@ -94,7 +94,7 @@ const achievements = [
   {
     icon: <Cpu className="w-5 h-5" />,
     title: "Distributed Render Farm",
-    desc: "Built Unreal Engine render farm infrastructure, cutting production turnaround time significantly.",
+    desc: "Built Unreal Engine render farm infrastructure from scratch, cutting production turnaround time.",
   },
   {
     icon: <Zap className="w-5 h-5" />,
@@ -135,13 +135,13 @@ const previousRoles = [
     period: "Jan 2023 – Sep 2023",
     location: "Bangalore, India",
     points: [
-      "Directed budgeting studies on current and proposed IT spending plans, determining impactful business enhancements",
-      "Oversaw on-site IT engineer dispatch plans, creating predefined response scenarios for common malfunctions",
-      "Interfaced with high-level client personnel, collecting performance feedback and integrating into IT policies",
+      "Reviewed IT spending plans and identified opportunities for cost-effective improvements",
+      "Coordinated on-site IT engineer dispatch and built response playbooks for common issues",
+      "Worked directly with client stakeholders to gather feedback and improve IT service policies",
       "Led technical upgrade projects for clients, coordinating with consultants and developers",
       "Diagnosed and resolved hardware and software issues across client environments",
-      "Designed and evaluated WAN and LAN connectivity technologies",
-      "Analyzed network traffic and performance metrics to optimize system performance",
+      "Designed and evaluated WAN and LAN connectivity solutions",
+      "Analyzed network traffic and performance metrics to identify and resolve bottlenecks",
       "Planned and implemented upgrades to system hardware and software",
     ],
   },

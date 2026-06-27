@@ -61,8 +61,7 @@ export function Hero() {
             </p>
 
             <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Designing Reliable IT Systems, Automating Operations, and Managing Infrastructure at Scale. 
-              With hands-on expertise across servers, networks, automation, and enterprise IT operations.
+              Building reliable IT systems, automating day-to-day operations, and managing infrastructure at scale — with hands-on experience across servers, networks, and enterprise IT environments.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-0">

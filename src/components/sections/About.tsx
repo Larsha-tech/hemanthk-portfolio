@@ -64,13 +64,13 @@ export function About() {
                 className="text-base text-foreground/80 leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                I manage the complete IT operations of House of Blue Beans (HOBB) — 200+ endpoints, multi-server infrastructure, network security, and automation pipelines that keep the organization running efficiently at all times.
+                I manage the complete IT operations at House of Blue Beans (HOBB) — covering 200+ endpoints, multi-server infrastructure, network security, and the automation pipelines that keep everything running.
               </p>
               <p
                 className="text-base text-foreground/80 leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                My approach is systems-first: build once, automate everything, monitor proactively. From centralized storage and VPN access for 100+ remote freelancers to zero-manual ticketing and real-time infrastructure alerts, every solution is designed to reduce operational overhead and prevent downtime.
+                My approach is systems-first: build once, automate everything, monitor proactively. Whether it's centralized storage, VPN access for 100+ remote freelancers, or real-time infrastructure alerts, every solution is built to cut manual work and keep things running without surprises.
               </p>
             </div>
 
