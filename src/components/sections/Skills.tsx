@@ -105,7 +105,7 @@ export function Skills() {
                     <Badge
                       key={sIdx}
                       variant="secondary"
-                      className="px-2.5 py-1 text-xs font-medium bg-white border border-border/70 text-muted-foreground hover:border-primary/30 hover:text-primary transition-colors"
+                      className="px-2.5 py-1 text-xs font-medium bg-white dark:bg-secondary/50 border border-border/70 text-muted-foreground hover:border-primary/30 hover:text-primary transition-colors"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {skill}
