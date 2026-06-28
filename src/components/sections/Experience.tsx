@@ -236,7 +236,10 @@ export function Experience() {
           >
             Work Experience
           </h2>
-          <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
+          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
+          <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Six years of hands-on IT management — from infrastructure and automation to hardware, security, and cross-team support.
+          </p>
         </motion.div>
 
         <div className="max-w-5xl mx-auto space-y-8">

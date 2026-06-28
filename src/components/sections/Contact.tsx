@@ -134,7 +134,7 @@ export function Contact() {
           >
             <div className="rounded-xl border border-border bg-white dark:bg-card shadow-sm p-6 h-full">
               <h3
-                className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
+                className="text-base font-semibold text-foreground mb-5 pb-3 border-b border-border"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Contact Information
@@ -198,7 +198,7 @@ export function Contact() {
           >
             <div className="rounded-xl border border-border bg-white dark:bg-card shadow-sm p-6 h-full">
               <h3
-                className="text-base font-semibold text-foreground mb-6 pb-3 border-b border-border"
+                className="text-base font-semibold text-foreground mb-5 pb-3 border-b border-border"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Send a Message

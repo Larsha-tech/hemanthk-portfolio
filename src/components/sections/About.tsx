@@ -54,7 +54,10 @@ export function About() {
             >
               About Me
             </h2>
-            <div className="w-14 h-1 rounded-full mx-auto" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
+            <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
+            <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
+              IT professional with a systems-first mindset — building infrastructure that scales, automating what slows teams down, and keeping everything running reliably.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
@@ -78,7 +81,7 @@ export function About() {
             <div className="lg:col-span-2">
               <div className="rounded-xl border border-border bg-white dark:bg-card p-6 shadow-sm space-y-4">
                 <h3
-                  className="text-base font-semibold text-foreground mb-5 pb-3 border-b border-border"
+                  className="text-base font-semibold text-foreground pb-3 border-b border-border"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   Quick Facts
@@ -112,7 +115,7 @@ export function About() {
           {/* Competencies grid */}
           <div>
             <h3
-              className="text-xl font-semibold text-foreground mb-8"
+              className="text-lg font-semibold text-foreground mb-5"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Core Competencies
