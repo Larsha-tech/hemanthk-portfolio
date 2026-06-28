@@ -50,11 +50,10 @@ const responsibilityCategories = [
     title: "Hardware Maintenance & Repair",
     icon: <HardDrive className="w-4 h-4" />,
     points: [
-      "Performed end-to-end hardware maintenance for 200+ computers and servers — diagnostics, component-level repairs, and preventive servicing",
-      "Diagnosed and resolved hardware failures through structured troubleshooting across CPUs, RAM, storage drives, PSUs, motherboards, and peripherals",
-      "Handled computer upgrades including RAM, SSD, GPU, and component replacements to extend device lifecycle",
-      "Resolved OS-related issues — boot failures, driver conflicts, system corruption, performance degradation, and fresh OS installs",
-      "Managed all printer-related support: installation, driver setup, network printing configuration, hardware faults, and consumable management",
+      "Diagnosed and repaired 200+ computers and servers — CPU, RAM, storage, PSU, and motherboard-level troubleshooting",
+      "Performed RAM, SSD, and GPU upgrades to extend device lifespan across the fleet",
+      "Resolved OS issues: boot failures, driver conflicts, system corruption, and fresh installs",
+      "Managed all printer support: installation, drivers, network printing, hardware faults, and consumables",
     ],
   },
   {
@@ -102,12 +101,10 @@ const responsibilityCategories = [
     title: "Customer Success Support",
     icon: <FileText className="w-4 h-4" />,
     points: [
-      "Researched client and brand backgrounds using verifiable official sources, catching factual errors before delivery",
-      "Designed and ran a 9-section brief template across multiple concurrent client projects",
-      "Translated raw inputs — Slack threads, PDF scope decks, style guides — into structured Creative briefs",
-      "Built US-market context (HOA norms, retail channels, staging cues) for an India-based visualization team",
-      "Cross-checked scope and deliverable counts to catch discrepancies before they reached production",
-      "Prepared Stage 1 → Stage 2 handover scripts separating confirmed items from open client questions",
+      "Researched client and brand backgrounds to structure briefs using a 9-section template",
+      "Translated raw inputs — Slack threads, PDF scope decks, style guides — into structured creative briefs",
+      "Built market context for US-based client projects and verified deliverable counts before handover",
+      "Prepared Stage 1 → Stage 2 handover scripts separating confirmed scope from open client questions",
     ],
   },
 ];
@@ -300,7 +297,7 @@ export function Experience() {
                 >
                   Key Responsibilities
                 </h4>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 items-start">
                   {responsibilityCategories.map((cat, idx) => (
                     <motion.div
                       key={idx}
