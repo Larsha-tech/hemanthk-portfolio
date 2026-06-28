@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Briefcase, Building2, MapPin, Calendar, CheckCircle2, GraduationCap, BookOpen,
   Server, Network, Zap, Users, Cpu, Activity, Code2, Shield, HardDrive, Award,
-  ChevronDown, ChevronUp, FileText
+  FileText
 } from "lucide-react";
 
 const responsibilityCategories = [
@@ -220,7 +219,6 @@ const education = [
 ];
 
 export function Experience() {
-  const [showResponsibilities, setShowResponsibilities] = useState(false);
 
   return (
     <section id="experience" className="py-20 bg-white dark:bg-background">
@@ -293,26 +291,13 @@ export function Experience() {
 
               {/* Categorized responsibilities */}
               <div className="px-6 py-6">
-                <div className="flex items-center justify-between mb-5">
-                  <h4
-                    className="text-sm font-semibold uppercase tracking-wide text-muted-foreground"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    Key Responsibilities
-                  </h4>
-                  <button
-                    onClick={() => setShowResponsibilities(!showResponsibilities)}
-                    className="flex items-center gap-1 text-xs font-medium transition-colors hover:opacity-75"
-                    style={{ color: "var(--portfolio-accent)", fontFamily: "'Inter', sans-serif" }}
-                  >
-                    {showResponsibilities ? (
-                      <><ChevronUp size={14} /> Hide</>
-                    ) : (
-                      <><ChevronDown size={14} /> Show all {responsibilityCategories.length} categories</>
-                    )}
-                  </button>
-                </div>
-                {showResponsibilities && <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <h4
+                  className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-5"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  Key Responsibilities
+                </h4>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
                   {responsibilityCategories.map((cat, idx) => (
                     <motion.div
                       key={idx}
@@ -348,7 +333,7 @@ export function Experience() {
                       </ul>
                     </motion.div>
                   ))}
-                </div>}
+                </div>
               </div>
             </div>
           </motion.div>
