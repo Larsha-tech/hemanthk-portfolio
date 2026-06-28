@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu, Workflow, Database, Shield, Package, MessageSquare,
-  Activity, Thermometer, BookOpen, ExternalLink, Globe
+  Activity, Thermometer, BookOpen, ExternalLink, Globe, Gamepad2, Play
 } from "lucide-react";
+import { NetworkDefenseGame } from "@/components/game/NetworkDefenseGame";
 
 const projects = [
   {
@@ -90,7 +92,17 @@ const projects = [
   }
 ];
 
+const gameProject = {
+  title: "Network Defense Game",
+  description: "An IT-themed browser game built with React and HTML5 Canvas. Defend your core server from incoming cyber threats — viruses, DDoS attacks, ransomware, and zero-days — across waves of increasing difficulty.",
+  tags: ["React", "HTML5 Canvas", "TypeScript", "Game Dev"],
+  problem: "Wanted an interactive element that showcases front-end development skills in a memorable way.",
+  result: "Fully playable browser game with wave-based progression, particle effects, score tracking, and 4 threat types.",
+  icon: <Gamepad2 className="w-6 h-6" />,
+};
+
 export function Projects() {
+  const [gameOpen, setGameOpen] = useState(false);
   return (
     <section id="projects" className="py-20" style={{ backgroundColor: "var(--portfolio-section-alt)" }}>
       <div className="container mx-auto px-4 md:px-8">
@@ -114,6 +126,59 @@ export function Projects() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+          {/* Game card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="h-full flex flex-col border-border bg-white dark:bg-card hover:border-primary/30 hover:shadow-md transition-all rounded-xl overflow-hidden">
+              <CardHeader className="pb-3 pt-6 px-6">
+                <div
+                  className="w-11 h-11 rounded-lg flex items-center justify-center mb-4"
+                  style={{ backgroundColor: "var(--portfolio-icon-bg)", color: "var(--portfolio-accent)" }}
+                >
+                  {gameProject.icon}
+                </div>
+                <CardTitle className="text-lg leading-tight text-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  {gameProject.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col justify-between px-6 pb-6">
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {gameProject.description}
+                </p>
+                <div className="space-y-2 mb-5 text-sm">
+                  <div className="flex gap-2">
+                    <span className="font-semibold text-foreground/70 shrink-0" style={{ fontFamily: "'Inter', sans-serif" }}>Problem:</span>
+                    <span className="text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{gameProject.problem}</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="font-semibold shrink-0" style={{ color: "var(--portfolio-accent)", fontFamily: "'Inter', sans-serif" }}>Result:</span>
+                    <span className="text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{gameProject.result}</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {gameProject.tags.map((tag, tIdx) => (
+                    <Badge key={tIdx} variant="outline" className="font-medium text-xs border-border/70 text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setGameOpen(true)}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-85 w-fit"
+                  style={{ backgroundColor: "var(--portfolio-navy)", fontFamily: "'Inter', sans-serif" }}
+                >
+                  <Play className="w-3.5 h-3.5" />
+                  Play Game
+                </button>
+              </CardContent>
+            </Card>
+          </motion.div>
+
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -188,6 +253,8 @@ export function Projects() {
           ))}
         </div>
       </div>
+
+      {gameOpen && <NetworkDefenseGame onClose={() => setGameOpen(false)} />}
     </section>
   );
 }
