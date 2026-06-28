@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/hooks/use-theme";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import { CustomCursor } from "@/components/CustomCursor";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function App() {
   return (
     <ThemeProvider>
       <TooltipProvider>
+        <CustomCursor />
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
         </WouterRouter>
