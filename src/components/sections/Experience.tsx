@@ -48,6 +48,17 @@ const responsibilityCategories = [
     ],
   },
   {
+    title: "Hardware Maintenance & Repair",
+    icon: <HardDrive className="w-4 h-4" />,
+    points: [
+      "Performed end-to-end hardware maintenance for 200+ computers and servers — diagnostics, component-level repairs, and preventive servicing",
+      "Diagnosed and resolved hardware failures through structured troubleshooting across CPUs, RAM, storage drives, PSUs, motherboards, and peripherals",
+      "Handled computer upgrades including RAM, SSD, GPU, and component replacements to extend device lifecycle",
+      "Resolved OS-related issues — boot failures, driver conflicts, system corruption, performance degradation, and fresh OS installs",
+      "Managed all printer-related support: installation, driver setup, network printing configuration, hardware faults, and consumable management",
+    ],
+  },
+  {
     title: "Production & Render Infrastructure",
     icon: <Cpu className="w-4 h-4" />,
     highlight: true,
