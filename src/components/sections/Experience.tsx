@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Briefcase, Building2, MapPin, Calendar, CheckCircle2, GraduationCap, BookOpen,
   Server, Network, Zap, Users, Cpu, Activity, Code2, Shield, HardDrive, Award,
-  ChevronDown, ChevronUp
+  ChevronDown, ChevronUp, FileText
 } from "lucide-react";
 
 const responsibilityCategories = [
@@ -86,6 +86,18 @@ const responsibilityCategories = [
       "Planned infrastructure upgrades, scalability improvements, and roadmap",
       "Coordinated IT requirements across production, design, and operations teams",
       "Managed concurrent IT projects, vendor relationships, and procurement cycles",
+    ],
+  },
+  {
+    title: "Customer Success Support",
+    icon: <FileText className="w-4 h-4" />,
+    points: [
+      "Researched client and brand backgrounds using verifiable official sources, catching factual errors before delivery",
+      "Designed and ran a 9-section brief template across multiple concurrent client projects",
+      "Translated raw inputs — Slack threads, PDF scope decks, style guides — into structured Creative briefs",
+      "Built US-market context (HOA norms, retail channels, staging cues) for an India-based visualization team",
+      "Cross-checked scope and deliverable counts to catch discrepancies before they reached production",
+      "Prepared Stage 1 → Stage 2 handover scripts separating confirmed items from open client questions",
     ],
   },
 ];

@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu, Workflow, Database, Shield, Package, MessageSquare,
-  Activity, Thermometer, BookOpen, ExternalLink
+  Activity, Thermometer, BookOpen, ExternalLink, Globe
 } from "lucide-react";
 
 const projects = [
@@ -79,6 +79,14 @@ const projects = [
     problem: "Server room temperatures were not monitored, risking hardware damage.",
     result: "Automated temperature tracking with instant alerts preventing equipment failure.",
     icon: <Thermometer className="w-6 h-6" />
+  },
+  {
+    title: "Company Website & Case Study Management",
+    description: "Maintained and updated the HOBB company website, publishing client case studies and keeping project portfolios current. Coordinated with the team to ensure timely, accurate content goes live.",
+    tags: ["Web Management", "Content Publishing", "Case Studies", "CMS"],
+    problem: "Case studies and project showcases needed regular updates as new client work was completed.",
+    result: "Website consistently updated with published case studies, strengthening the company's online presence.",
+    icon: <Globe className="w-6 h-6" />
   }
 ];
 

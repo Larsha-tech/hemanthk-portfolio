@@ -20,7 +20,7 @@ export function Hero() {
     { value: "200+", label: "Systems Managed", icon: <Monitor className="w-5 h-5" /> },
     { value: "100+", label: "Remote Users", icon: <Users className="w-5 h-5" /> },
     { value: "6+", label: "Years Experience", icon: <Briefcase className="w-5 h-5" /> },
-    { value: "10", label: "Projects Delivered", icon: <Cpu className="w-5 h-5" /> },
+    { value: "10+", label: "Projects Delivered", icon: <Cpu className="w-5 h-5" /> },
     { value: "5+", label: "Servers Maintained", icon: <Server className="w-5 h-5" /> },
   ];
 
