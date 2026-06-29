@@ -108,7 +108,7 @@ export function Hero() {
                 <Linkedin size={17} />
               </a>
               <a
-                href="https://github.com/Larsha-tech"
+                href="https://github.com/f1hunterr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center border border-border text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
