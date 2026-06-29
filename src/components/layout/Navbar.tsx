@@ -130,7 +130,7 @@ export function Navbar() {
           </button>
 
           <a
-            href="https://github.com/f1hunterr"
+            href="https://github.com/Larsha-tech"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"

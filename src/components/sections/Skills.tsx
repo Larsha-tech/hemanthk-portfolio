@@ -72,7 +72,7 @@ export function Skills() {
             </h2>
             <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--portfolio-accent)" }}></div>
             <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
-              A comprehensive toolkit for managing, securing, and automating modern IT environments at scale.
+              The tools and technologies used daily to manage, secure, and automate IT infrastructure at scale.
             </p>
           </motion.div>
 

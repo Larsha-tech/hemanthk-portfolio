@@ -46,13 +46,11 @@ const contactInfo = [
     icon: <Building2 className="w-5 h-5" />,
     label: "Company",
     value: "House of Blue Beans (HOBB)",
-    href: "#",
   },
   {
     icon: <MapPin className="w-5 h-5" />,
     label: "Location",
     value: "Hennur, Bangalore, Karnataka",
-    href: "#",
   },
 ];
 
@@ -156,13 +154,22 @@ export function Contact() {
                       >
                         {item.label}
                       </p>
-                      <a
-                        href={item.href}
-                        className="text-sm text-foreground hover:text-primary transition-colors"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
-                      >
-                        {item.value}
-                      </a>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="text-sm text-foreground hover:text-primary transition-colors"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <span
+                          className="text-sm text-foreground"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {item.value}
+                        </span>
+                      )}
                     </div>
                   </div>
                 ))}
