@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Send, Building2 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -41,6 +42,12 @@ const contactInfo = [
     label: "LinkedIn",
     value: "linkedin.com/in/hemanth-k-8609b4255",
     href: "https://www.linkedin.com/in/hemanth-k-8609b4255",
+  },
+  {
+    icon: <FaWhatsapp className="w-5 h-5" />,
+    label: "WhatsApp",
+    value: "+91 80884 61724",
+    href: "https://wa.me/918088461724?text=Hi%20Hemanth%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!",
   },
   {
     icon: <Building2 className="w-5 h-5" />,

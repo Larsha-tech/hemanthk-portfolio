@@ -1,9 +1,45 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail, Server, Users, Monitor, Cpu, Briefcase, Github, Linkedin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
+const TITLES = [
+  "IT Manager & Infrastructure Lead",
+  "Automation & Systems Specialist",
+  "Network & Security Operations",
+  "Server Infrastructure Engineer",
+];
+
 export function Hero() {
+  const [titleIdx, setTitleIdx] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [phase, setPhase] = useState<"typing" | "pause" | "deleting">("typing");
+
+  useEffect(() => {
+    const current = TITLES[titleIdx];
+    let timer: ReturnType<typeof setTimeout>;
+
+    if (phase === "typing") {
+      if (displayed.length < current.length) {
+        timer = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 65);
+      } else {
+        timer = setTimeout(() => setPhase("pause"), 1800);
+      }
+    } else if (phase === "pause") {
+      timer = setTimeout(() => setPhase("deleting"), 100);
+    } else {
+      if (displayed.length > 0) {
+        timer = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 35);
+      } else {
+        setTitleIdx((i) => (i + 1) % TITLES.length);
+        setPhase("typing");
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayed, phase, titleIdx]);
+
   const handleScrollTo = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -42,9 +78,18 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-widest mb-4 px-3 py-1 bg-primary/8 rounded-full border border-primary/15">
-              IT & Automation Manager · HOBB
-            </span>
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className="inline-block text-sm font-semibold text-primary uppercase tracking-widest px-3 py-1 bg-primary/8 rounded-full border border-primary/15">
+                IT & Automation Manager · HOBB
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 dark:text-green-400 px-2.5 py-1 rounded-full border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-950/30">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                </span>
+                Open to Work
+              </span>
+            </div>
 
             <h1
               className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold text-foreground mb-4 leading-tight"
@@ -54,10 +99,11 @@ export function Hero() {
             </h1>
 
             <p
-              className="text-base md:text-lg font-medium text-primary mb-5 leading-snug"
+              className="text-base md:text-lg font-medium text-primary mb-5 leading-snug min-h-[1.75rem]"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Manager - IT, Production Automation & Infrastructure | House of Blue Beans (HOBB)
+              {displayed}
+              <span className="animate-pulse ml-0.5 inline-block w-0.5 h-5 bg-primary align-middle" />
             </p>
 
             <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg" style={{ fontFamily: "'Inter', sans-serif" }}>

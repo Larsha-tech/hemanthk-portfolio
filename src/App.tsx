@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/hooks/use-theme";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { CustomCursor } from "@/components/CustomCursor";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider>
       <TooltipProvider>
         <CustomCursor />
+        <ScrollToTop />
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
         </WouterRouter>
